@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.ReviewMapper">
+
+    <!-- 글 작성 -->
+    <insert id="save" parameterType="ReviewDto">
+        insert into board_table(boardWriter, boardPass, boardTitle, boardContents, mainImagePath, detailImagePath, mainUnique, detailUnique)
+        values(#{boardWriter}, #{boardPass}, #{boardTitle}, #{boardContents}, #{mainImagePath}, #{detailImagePath}, #{mainUnique}, #{detailUnique})
+    </insert>
+
+    <!-- 글 목록 작성일 순으로 전체조회 -->
+    <select id="findAll" resultType="ReviewDto">
+        select * from board_table order by id desc
+    </select>
+
+    <!-- 글 상세 조회 -->
+    <select id="findById" parameterType="Long" resultType="ReviewDto">
+        select * from board_table where id=#{id}
+    </select>
+    <!--      아이디 하나 조회-->
+    <select id="Id" resultType="Long">
+        select mainImagePath from board_table order by id DESC LIMIT 1
+    </select>
+    <!--     메인 이미지 경로 하나 조회-->
+    <select id="findMain" parameterType="Long" resultType="String">
+        select mainUnique from board_table where id = #{id}
+    </select>
+    <!--     디테일 이미지 경로 하나 조회-->
+    <select id="findDetail" parameterType="Long" resultType="String">
+        select detailUnique from board_table where id = #{id}
+    </select>
+
+    <!-- 글 조회수 증가 -->
+    <update id="updateHits" parameterType="Long">
+        update board_table set boardHits = boardHits + 1 where id=#{id}
+    </update>
+
+    <!-- 게시물 삭제 -->
+    <delete id="delete" parameterType="Long">
+        delete from board_table where id=#{id}
+    </delete>
+    <!-- 게시물 수정 -->
+    <update id="update" parameterType="ReviewDto">
+        update board_table set boardTitle=#{boardTitle}, boardContents=#{boardContents}, mainImagePath=#{mainImagePath}, detailImagePath=#{detailImagePath}, mainUnique=#{mainUnique}, detailUnique=#{detailUnique} where id=#{id}
+    </update>
+    <!-- 페이징 리스트 조회-->
+    <select id="pagingList" parameterType="java.util.HashMap" resultType="ReviewDto">
+        select * from board_table order by id desc limit #{start}, #{limit}
+    </select>
+    <!--게시물 갯수 조회-->
+    <select id="boardCount" resultType="Integer">
+        select count(id) from board_table
+    </select>
+
+    <!-- 사용자가 작성한 게시글 가져오기 -->
+    <select id="findBoardsByUserId" parameterType="String" resultType="ReviewDto">
+        SELECT * FROM board_table WHERE boardWriter = #{userId}
+    </select>
+
+    <!-- 조회수 순으로 페이징된 게시글 조회 -->
+    <select id="findPopularPostsPaged" parameterType="java.util.HashMap" resultType="ReviewDto">
+        select * from board_table order by boardHits desc limit #{start}, #{limit}
+    </select>
+
+    <!-- 글 목록 작성일 순으로 8개만 조회 -->
+    <select id="findMainPage" resultType="ReviewDto">
+        select * from board_table order by id desc limit 8
+    </select>
+
+
+</mapper>

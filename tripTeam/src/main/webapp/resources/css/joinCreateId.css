@@ -1,0 +1,251 @@
+.wrapper {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 80px;
+    border: 1px solid #39A7FF;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px #87C4FF;
+}
+.wrapper input{
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 12px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 300;
+    outline: none;
+}
+
+.wrapper div {
+    /*padding-top: 3px;*/
+    /*padding-bottom: 8px;*/
+}
+
+.wrapper div .error {
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
+
+
+.title {
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 5px;
+
+    margin: 30px 0;
+    border-bottom: 1px solid #39A7FF;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 800;
+}
+.wrapper label{
+    display: block;
+    font-size: 16px;
+    margin-bottom: 6px;
+
+    position: relative;
+    top: 0;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+
+}
+.wrapper label::after{
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    margin-left: 3px;
+    border-radius: 50%;
+    background: #ee1c25;
+    vertical-align: middle;
+}
+
+.Id input {
+    width: 80%;
+}
+
+.password input {
+    width: 100%;
+}
+
+.passwordCheck input {
+    width: 100%;
+}
+.nameCheck input{
+    width: 100%;
+}
+
+.birth input {
+    width: 100%;
+}
+
+.phoneNo input {
+    width: 100%;
+}
+
+.email input {
+    width: 30%;
+}
+
+input:focus,
+select:focus {
+    box-shadow: 0px 0px 7px 0px #87C4FF;
+}
+
+.email select {
+    width: 30%;
+    height: 35px;
+    border-radius: 3px;
+    float: right;
+    border: 1px solid #dbdbdb;
+    color: rgba(0,0,0,0.6);
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 300;
+    outline: none;
+}
+.signUp{
+    max-width: 400px;
+    margin: 0 auto;
+}
+.Id button {
+    cursor: pointer;
+    height: 35px;
+    box-sizing: border-box;
+    width: 17%;
+    cursor: pointer;
+    background-color: #87C4FF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 12px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+}
+
+.signUp Button{
+    width: 100%;
+    height: 50px;
+    cursor:pointer;
+    background-color: #87C4FF;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+}
+
+
+
+.error{
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+    height: 20px;
+    color:red;
+    font-size: 12px;
+
+}
+
+/* --------------------- */
+
+
+button{cursor: pointer;}
+.loginbox{
+    width: 780px;
+    height: 550px;
+    margin: 0 auto;
+    margin-top: 300px;
+    border-radius: 42px ;
+    overflow: hidden;
+}
+.loginbox h2{
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    background-color: #fff;
+}
+.loginbox form{
+    width: 100%;
+    height: 450px;
+    background-color: #fff;
+    padding: 60px;
+    box-sizing: border-box;
+}
+.loginbox fieldset{
+    border: none;
+}
+.loginbox legend{
+    position: absolute;
+    left: -999em;
+}
+.loginbox label{
+    display: block;
+    font-size: 17px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.loginbox input{
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 25px;
+    border: none;
+    background-color: #ededed;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.loginbox ul{
+    width: 100%;
+    text-align: right;
+}
+.loginbox li{
+    display: inline-block;
+    height: 12px;
+    line-height: 12px;
+}
+.loginbox li:last-child{
+    border-left: 1px solid #333;
+    padding-left: 10px;
+    margin-left: 4px;
+}
+.loginbox a{
+    color: #333;
+    font-size: 12px;
+    position: relative;
+    top: -2px;
+}
+.loginbox button{
+    display: block;
+    width: 220px;
+    height: 50px;
+    margin: 0 auto;
+    border: none;
+    background-color: #1673ea;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 900;
+}
+.gender select{
+    width: 100%;
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    color: rgba(0,0,0,0.6);
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 300;
+    outline: none;
+}
+
+
+
+

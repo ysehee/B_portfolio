@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.accompanyCommentMapper">
+
+<!--//////////////////// INSERT 추가 ////////////////////-->
+
+    <!--댓글 입력-->
+    <insert id="insertCmt" parameterType="AccompanyCommentDto">
+        INSERT INTO accompany_comment
+        (accompanyNo, accompanyCommentWriter, accompanyCommentContent)
+        VALUES (#{accompanyNo},
+        #{accompanyCommentWriter},
+        #{accompanyCommentContent})
+    </insert>
+
+
+<!--//////////////////// SELECT 조회 ////////////////////-->
+
+    <!--해당 동행의 댓글 전체 불러오기-->
+    <select id="selectCmtAll" resultType="AccompanyCommentDto">
+        SELECT * FROM accompany_comment
+        WHERE accompanyNo=#{accompanyNo}
+        ORDER BY accompanyCommentNo DESC;
+    </select>
+
+    <!--해당 동행글의 전체 댓글 수 뽑기-->
+    <select id="countCmt" resultType="int">
+        SELECT count(*) FROM accompany_comment
+        WHERE accompanyNo;
+    </select>
+
+    <!--내가 쓴 동행 댓글 보기 -->
+    <select id="selectAccCmtIWrote" parameterType="String" resultType="AccompanyCommentDto">
+        SELECT *
+        FROM accompany_comment
+        INNER JOIN accompany_main
+        ON accompany_comment.accompanyNo=accompany_main.accompanyNo
+        WHERE accompanyCommentWriter=#{userId};
+    </select>
+
+<!--//////////////////// UPDATE 수정 ////////////////////-->
+
+    <!--댓글 수정-->
+    <update id="updateCmt" parameterType="map">
+        UPDATE accompany_comment
+        SET accompanyhCommentContent=#{CommentContent}
+        WHERE accompanyNo=#{accompanyNo}
+        AND accompanyCommentNo=#{accompanyCommentNo}
+    </update>
+
+
+<!--//////////////////// DELETE 삭제 ////////////////////-->
+
+    <!-- 댓글 삭제 -->
+    <delete id="deleteCmt">
+        DELETE FROM accompany_comment
+        WHERE accompanyCommentNo=#{accompanyCommentNo}
+    </delete>
+
+    <!-- 댓글 전체 삭제 -->
+    <delete id="deleteCmtAll">
+        DELETE FROM accompany_comment
+    </delete>
+
+</mapper>

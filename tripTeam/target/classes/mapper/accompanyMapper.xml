@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.accompanyMapper">
+
+    <!--//////////////////// INSERT 추가 ////////////////////-->
+
+    <!--동행글 새 글 작성-->
+    <insert id="insert" parameterType="AccompanyDto">
+        insert into accompany_main
+        (accompanyWriter,
+        accompanyTitle,
+        accompanyContent,
+        accompanyRecruit,
+        accompanyTripStartDate,
+        accompanyTripEndDate,
+        accompanyArea,
+        accompanyImg)
+        values (
+        #{accompanyWriter},
+        #{accompanyTitle},
+        #{accompanyContent},
+        #{accompanyRecruit},
+        #{accompanyTripStartDate},
+        #{accompanyTripEndDate},
+        #{accompanyArea},
+        concat(#{accompanyArea}, '.png')
+        )
+    </insert>
+
+    <!--찜하기 누르면 [글 넘버], [유저id] 저장하기 -->
+    <insert id="insertLikeInfo" parameterType="map">
+        INSERT INTO accompany_like (accompanyNo, accompanyLikeUser)
+        VALUES (#{accompanyNo}, #{accompanyLikeUser})
+    </insert>
+
+
+    <!--//////////////////// SELECT 조회 ////////////////////-->
+
+    <!--동행글 전체 불러오기-->
+    <select id="selectAll" resultType="AccompanyDto">
+        select * from accompany_main order by accompanyRegDate desc, accompanyNo desc;
+    </select>
+
+    <!--원하는 동행글 불러오기-->
+    <select id="selectOne" parameterType="int" resultType="AccompanyDto">
+        select * from accompany_main where accompanyNo= #{accompanyNo};
+    </select>
+
+    <!--동행글 최신순으로 정렬-->
+    <select id="selectRecent" parameterType="String" resultType="AccompanyDto">
+        select * from accompany_main order by accompanyRegDate desc;
+    </select>
+
+    <!--동행글 인기순으로 정렬-->
+    <select id="selectLikeCnt" parameterType="String" resultType="AccompanyDto">
+        select * from accompany_main order by accompanyLikeCnt desc;
+    </select>
+
+    <!--동행글 많이 본 순으로 정렬-->
+    <select id="selectViewCnt" parameterType="String" resultType="AccompanyDto">
+        select * from accompany_main order by accompanyViewCnt desc;
+    </select>
+
+    <!--전체 글 수 뽑기-->
+    <select id="count" resultType="int">
+        select count(*) from accompany_main;
+    </select>
+
+    <!--동행하기 버튼 누르면 정보 띄우기-->
+    <select id="selectOne2" parameterType="int" resultType="AccompanyDto">
+        select userId, userGender, userAge from user left join accompany_main on user=accompany_main where accompanyNo=#{accompanyNo};
+    </select>
+
+    <!--현재 로그인된 유저가 찜하기 눌렀을 때, 해당 글 넘버에 유저 정보가 이미 있는지 확인하기-->
+    <select id="chkLikeUser" resultType="AccompanyLikeDto">
+        SELECT *
+        FROM accompany_like
+        WHERE accompanyNo=#{accompanyNo}
+        and accompanyLikeUser=#{accompanyLikeUser}
+        ;
+    </select>
+
+    <!--동행글 검색해서 해당되는 글만 보여지기-->
+    <select id="showAboutSearchText" parameterType="String" resultType="AccompanyDto">
+        SELECT * FROM accompany_main
+        WHERE accompanyTitle LIKE concat('%',#{accompanySearchText},'%')
+        or accompanyContent LIKE concat('%',#{accompanySearchText},'%')
+    </select>
+
+    <select id="getLikeBtnUserList" parameterType="String" resultType="String">
+        SELECT accompanyNo
+        FROM accompany_like
+        WHERE accompanyLikeUser = #{loginUserId}
+    </select>
+
+    <!--/////////////// 메인 페이지 ///////////////-->
+    <select id="accompanyToMain" resultType="AccompanyDto">
+        select * from accompany_main order by accompanyNo limit 8;
+    </select>
+
+
+    <!--//////////////////// UPDATE 수정 ////////////////////-->
+
+    <!--동행글 수정하기-->
+    <update id="update" parameterType="map">
+        update accompany_main
+        set accompanyTitle=#{title},
+        accompanyContent=#{content}
+        <!--        accompanyRecruit=#{accompanyRecruit},-->
+        <!--        accompanyTripStartDate=#{accompanyTripStartDate},-->
+        <!--        accompanyArea=#{accompanyArea}-->
+        where accompanyNo=#{accompanyNo};
+    </update>
+
+    <!-- 불러오면서 조회수 1씩 증가-->
+    <update id="increaseViewCnt" parameterType="int">
+        update accompany_main set accompanyViewCnt = accompanyViewCnt + 1 where accompanyNo = #{accompanyNo}
+    </update>
+
+    <!--찜하기 누르면 1씩 증가-->
+    <update id="increaseLikeCnt" parameterType="map">
+        update accompany_main set accompanyLikeCnt = accompanyLikeCnt + 1 where accompanyNo = #{accompanyNo}
+    </update>
+
+    <!--찜하기 다시 1 감소-->
+    <update id="decreaseLikeCnt" parameterType="map">
+        update accompany_main set accompanyLikeCnt = accompanyLikeCnt - 1 where accompanyNo = #{accompanyNo}
+    </update>
+
+
+    <!--//////////////////// DELETE 삭제 ////////////////////-->
+
+    <!-- 삭제 -->
+    <delete id="delete" parameterType="int">
+        delete from accompany_main where accompanyNo=#{accompanyNo}
+    </delete>
+
+    <!-- 전체 삭제 -->
+    <delete id="deleteAll" parameterType="int">
+        delete from accompany_main
+    </delete>
+
+    <!--찜하기 정보 삭제-->
+    <delete id="deleteLike" parameterType="map">
+        delete from accompany_like
+        where accompanyNo=#{accompanyNo} and accompanyLikeUser=#{accompanyLikeUser}
+    </delete>
+
+    <!--찜하기 테이블 전체삭제 (테스트용)-->
+    <delete id="deleteLikeAll" parameterType="int">
+        delete from accompany_like
+    </delete>
+
+</mapper>

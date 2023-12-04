@@ -1,0 +1,171 @@
+/* 게시물과 댓글 영역 */
+.myreview {
+    overflow: hidden;
+}
+
+.my_board,
+.my_comment {
+    float: left;
+    width: 400px;
+    height: 585px;
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+    border-radius: 8px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    box-shadow: rgba(0, 0, 0, 0.16) -5px 5px 20px;
+}
+
+/* 게시글  리스트 */
+.post-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.board_id{
+    width: 65px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    font-size: 17px;
+    font-weight: bold;
+}
+.board_id:after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 44px;
+    margin-left: 8px;
+    /* margin-right: 5px; */
+    vertical-align: middle;
+    background-color: #dbdbdb;
+}
+/*li*/
+.post {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+/*댓글리스트*/
+.comment-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.comment_li{
+    width: 95%;
+    height: 50px;
+    line-height: 50px;
+    display: flex;
+    text-align: left;
+    justify-content: flex-start;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px;
+}
+
+.comment_id{
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    font-size: 17px;
+    font-weight: bold;
+}
+.comment_id:after{
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 44px;
+    /*margin-left: 8px;*/
+    /* margin-right: 5px; */
+    vertical-align: middle;
+    background-color: #dbdbdb;
+}
+
+
+.commnet_writer{
+    width: 40%;
+    height: 100%;
+}
+.commnet_writer:after {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 44px;
+    margin-left: 8px;
+    /* margin-right: 5px; */
+    vertical-align: middle;
+    background-color: #dbdbdb;
+}
+
+.comment_content {
+    width: 190px;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+
+.post-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 55%;
+    font-size: 18px;
+    margin: 0;
+}
+.post-title:before {
+    content: '';
+    display: inline-block;
+    width: 2px;
+    height: 44px;
+    /*margin-left: 8px;*/
+    margin-right: 5px;
+    vertical-align: middle;
+    background-color: #dbdbdb;
+}
+
+.my_board h2,
+.my_comment h2 {
+    font-family: Noto Sans KR,sans-serif;
+    font-weight:500;
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bababa;
+}
+.my_board h2:before,
+.my_comment h2:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-radius: 50%;
+    background: #ee1c25;
+    vertical-align: middle;
+}
+
+.form_title3{
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 800;
+    border-bottom: 1px solid #dbdbdb;
+    width: 97%;
+    /*margin: 0 auto;*/
+    margin-bottom: 40px;
+}
+

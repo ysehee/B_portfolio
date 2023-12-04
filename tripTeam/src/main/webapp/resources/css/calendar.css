@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+body { background-color : skyblue; }
+
+.calendarBox {
+    background-color : white;
+    height: 240px;
+    width: 200px;
+    /* margin: 0px; */
+    padding: 20px;
+    margin: 0 auto;
+    border: 1px solid;
+    border-radius:5px;
+    box-shadow:0px 40px 30px -20px rgba(0,0,0,0.3);
+
+    position: absolute;
+    top: 50px;
+    right: 22px;
+}
+
+td {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+}
+
+.Calendar {
+    text-align: center;
+}
+
+.Calendar>thead>tr:first-child>td {
+    font-family: 'Questrial', sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.Calendar>thead>tr:last-child>td {
+    font-family: 'Questrial', sans-serif;
+    font-weight: 600;
+}
+
+.Calendar>tbody>tr>td>p:nth-of-type(1) {
+    font-family: 'Montserrat', sans-serif;
+    height: 25px;
+    width: 25px;
+    border-radius: 12.5px;
+    transition-duration: .2s;
+    line-height: 25px;
+    margin: 2.5px;
+    margin: 0 auto;
+    /* margin-bottom: 5px; */
+    display: block;
+    text-align: center;
+
+    /* font-size: 14px; */
+}
+
+.pastDay {
+    color: lightgray;
+}
+
+.today {
+    background-color: #F5D042;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.futureDay {
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+.futureDay:hover{
+    background:#eee;
+}
+
+.futureDay.choiceDay,
+.today.choiceDay {
+    background: #0A174E;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#datePrice {
+    margin-top: 50px;
+    /* padding: 20px 0; */
+    /* box-sizing: border-box; */
+}
+
+#saturday {
+    color: skyblue;
+}
+
+#sunday {
+    color: red;
+}
+
+#datePrice {
+    display: flex;
+    flex-direction: column;
+}
+
+#datePrice input {
+    width: 120px;
+    margin: 5px 0;
+}
+
+#datePrice div {
+    padding: 0;
+}
+

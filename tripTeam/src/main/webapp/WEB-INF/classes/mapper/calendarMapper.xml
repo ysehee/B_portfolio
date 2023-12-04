@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.calendarMapper">
+
+    <select id="select" parameterType="PackageDto" resultType="PackageDto">
+        select * from package_info
+        where packageCategory = #{packageCategory}
+        and packageLocation = #{packageLocation}
+        and packageStartDate &lt;= #{packageStartDate}
+    </select>
+
+    <select id="getPriceList" parameterType="String" resultType="PackageDto">
+        select packageNo, packageStartDate, packagePrice from package_info
+        where packageId = #{packageId}
+        order by packageStartDate
+    </select>
+
+
+    <insert id="insert" parameterType="PackageDto">
+        insert into package_info (packageNo, packageId, packageCategory, packageLocation, packageStartDate, packagePrice, packageRegDate)
+
+        values (#{packageNo}, #{packageId}, #{packageCategory}, #{packageLocation}, #{packageStartDate}, #{packagePrice}, now())
+    </insert>
+</mapper>

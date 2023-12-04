@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    background-color: white;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a { 
+    text-decoration: none; 
+    color: inherit;
+}
+
+.contents {
+    width: 1300px;
+    min-width: 480px;
+    height: auto;
+
+    /*padding-right: 10px;*/
+    box-sizing: border-box;
+    overflow: hidden;
+
+    margin: 0 auto;
+    position: relative;
+    /* border: 1px solid; */
+}
+
+.w_800 {
+    width: 800px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+.box_title {
+    width: 100%;
+    height: 50px;
+
+    font-family: 'NanumSquareNeo_bold';
+    font-size: 25px;
+
+    margin-top: 100px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+    float: left;
+    
+    margin-right: 20px;
+}
+
+.icon img {
+    width: 100%;
+}
+
+.txt_left .box_txt {
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+
+.txt_right {
+    height: 50px;
+    line-height: 50px;
+    transition: all 0.2s;
+    border-radius: 10px;
+    /* float: right; */
+}
+
+.txt_right:hover {
+    color: rgb(64, 127, 71);
+}
+
+.mr_0 {
+    margin-right: 0;
+}
+
+.mrTop_0 {
+    margin-top: 0;
+}
+
+.mrTop_50 {
+    margin-top: 50px;
+}
+/* -------width = 1300px -------*/
+.w_1300{
+    width: 1300px;
+    /* margin: 0 auto;
+
+    position: relative; */
+}

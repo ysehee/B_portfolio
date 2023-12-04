@@ -1,0 +1,330 @@
+button[type="submit"] {
+
+}
+#container {
+    display: flex;
+    /*background-color: skyblue;*/
+    margin: 0 auto;
+    margin-top: 100px;
+
+    width: 1300px;
+    min-width: 1300px;
+}
+
+#leftArea {
+    width: 70%;
+    padding: 20px 50px 0 20px;
+    box-sizing: border-box;
+}
+
+#iconBox {
+    width: 50px;
+    height: 50px;
+}
+
+#iconBox img {
+    width: 100%;
+}
+
+.infoBox {
+    margin-top: 30px;
+    border-bottom: 1px solid #e9e9e9 ;
+}
+
+.infoBox > div {
+    display: flex;
+    line-height: 35px;
+    margin: 20px 0;
+}
+
+.infoBox input {
+    width: 90%;
+    height: 45px;
+
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /*margin-right: 20px;*/
+}
+
+.infoBox input:focus {
+    outline: none;
+    background-color: #e9e9e9;
+    border: 1px solid #39A7FF;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+.label {
+    position: relative;
+}
+
+.label span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 47.5%;
+
+}
+
+
+
+.infoBox input[type="email"]{
+    width: 95%;
+    height: 45px;
+    margin-bottom: 30px;
+}
+
+.infoBox [id*="birthYear"] {
+    width: 90%;
+    height: 45px;
+
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /*margin-right: 20px;*/
+}
+
+.infoBox [id*="birthMonth"],
+.infoBox [id*="birthDay"] {
+    width: 42.5%;
+    height: 45px;
+
+    background-color: #e9e9e9;
+    border: 1px solid #e9e9e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    /*margin-right: 20px;*/
+}
+
+
+.infoBox label {
+    /*margin-right: 10px;*/
+}
+
+.infoBox select {
+    margin-right: 10px;
+}
+
+#reservationTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#reservationTitle div:nth-of-type(2) {
+    margin-right: 40px;
+}
+
+#leftTitle {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#iconBox + p {
+    height: 50px;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    line-height: 50px;
+}
+
+#addButton,
+#minusButton {
+    width: 60px;
+    height: 25px;
+    line-height: 21px;
+
+    background-color: #39A7FF;
+    border: 2px solid #39A7FF;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+    color: white;
+    /*font-weight: bold;*/
+}
+
+#plzChk {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0 30px 0;
+    border-bottom: 1px solid #e9e9e9;
+
+    font-size: 15px;
+    color: rgb(128, 128, 128);
+
+    /*background-color: #d1cd9e;*/
+}
+
+#plzChk div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+#plzChk div img {
+    width: 100%;
+}
+
+
+.peopleInfo {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.peopleInfo table{
+    width: 100%;
+    border-spacing: 0 5px;
+    /*box-sizing: border-box;*/
+    /*border-collapse: collapse;*/
+}
+
+/******************************************/
+/*********** rightArea : 결제하기 ***********/
+/******************************************/
+#rightArea {
+    width: 30%;
+    padding: 30px;
+    box-sizing: border-box;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 4px;
+    border-radius: 10px;
+}
+
+.pay {
+    width: 100%;
+    height: 111px;
+
+    font-weight: bold;
+    border-bottom: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.pay > p {
+    font-size: 22px;
+}
+
+#plzChk1 {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 20px 0 30px 0;
+
+    color: rgb(128, 128, 128);
+
+    /*background-color: #d1cd9e;*/
+}
+
+#plzChk1 > p {
+    font-size: 15px;
+}
+
+#rightArea > label {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+#rightArea > label:nth-of-type(2) {
+    margin-bottom: 40px;
+}
+
+#plzChk1 > div {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+
+#plzChk1 div img {
+    width: 100%;
+}
+
+#choicePackage {
+    height: 100px;
+    display: flex;
+    overflow: hidden;
+    /*background-color: #d1cd9e;*/
+    margin-bottom: 30px;
+}
+
+#choicePackage > div:nth-of-type(1) {
+    width: 120px;
+    height: 100px;
+    border-radius: 10px;
+    margin-right: 20px;
+    /*display: flex;*/
+    overflow: hidden;
+}
+
+#choicePackage > div:nth-of-type(2) {
+    width: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    /*height: 100px;*/
+}
+
+#choicePackage > div:nth-of-type(2) > p:nth-of-type(1){
+    /*margin-bottom: 20px;*/
+}
+
+#choicePackage > div > img {
+    height: 110%;
+}
+
+.payMethod {
+    width: 300px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+
+    /*border: 1px solid #39A7FF;*/
+    border: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"]{
+    width: 300px;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+
+    background-color: #39A7FF;
+    border: 1px solid #e9e9e9;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    color: white;
+    font-size: 20px;
+}
+
+button[type="submit"]:focus {
+    border-color: #39A7FF;
+}
+
+.payMethodClicked {
+    border-color: #39A7FF;
+}
+
+#startDate1,
+#reservationTotalPrice1 {
+    border: none;
+    width: 150px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+

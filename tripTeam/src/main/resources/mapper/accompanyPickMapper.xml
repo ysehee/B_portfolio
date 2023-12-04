@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.accompanyPickMapper">
+
+    <!--//////////////////// INSERT 추가 ////////////////////-->
+
+    <!--[동행하기] 버튼 이용하여 동행 신청하면 DB에 저장-->
+    <insert id="insertPick" parameterType="map" >
+        insert into accompany_pick (accompanyNo, accompanyWriter, accompanyPickApyUser,accompanyMessage
+<!--        accompanyApyDate-->
+        )
+        values (#{accompanyNo},#{accompanyWriter},#{accompanyPickApyUser},#{accompanyMessage}
+<!--        ,#{accompanyApyDate}-->
+        )
+    </insert>
+
+
+    <!--동행하기 [수락], [거절] 누르면 해당 DB 에 저장-->
+    <insert id="insertPickConnection" parameterType="map" >
+        insert into accompany_connection
+        (accompanyNo, accompanyTitle, accompanyWriter,accompanyPickApyUser,accompanyYN)
+        values (#{accompanyNo},
+        #{accompanyTitle},
+        #{accompanyWriter},
+        #{accompanyPickApyUser},
+        #{accompanyYN})
+    </insert>
+
+    <!--//////////////////// SELECT 조회 ////////////////////-->
+
+    <!--내가 쓴 동행글 보기 -->
+    <select id="selectAccIWrote" parameterType="String" resultType="AccompanyDto">
+        SELECT *
+        FROM accompany_main
+        WHERE accompanyWriter=#{userId}
+    </select>
+
+
+
+    <!--내가 보낸 동행신청 -->
+    <select id="selectPickSpendList" parameterType="String" resultType="AccompanyPickDto">
+        SELECT *
+        FROM accompany_pick
+        INNER JOIN accompany_main
+        ON accompany_pick.accompanyNo=accompany_main.accompanyNo
+        WHERE accompany_pick.accompanyPickApyUser=#{userId}
+    </select>
+
+    <!--내가 받은 동행신청 -->
+    <select  id="selectPickReceiveList" parameterType="String" resultType="AccompanyPickDto">
+        SELECT *
+        FROM accompany_pick
+        INNER JOIN accompany_main
+        ON accompany_pick.accompanyNo=accompany_main.accompanyNo
+        WHERE accompany_pick.accompanyWriter=#{userId}
+    </select>
+
+
+    <!-- 나의 동행 확정내역 확인하기-->
+    <select id="selectConnectionList" parameterType="String" resultType="AccompanyConnectionDto">
+        SELECT * FROM accompany_connection
+        WHERE (accompanyWriter = #{userId}
+        OR accompanyPickApyUser = #{userId})
+        AND accompanyYN != 0
+        ORDER BY accompanyNo DESC;
+    </select>
+
+    <!--//////////////////// UPDATE 수정 ////////////////////-->
+
+    <!--보낸 메세지 수정-->
+    <update id="updatePickMessage" parameterType="map">
+        UPDATE SET accompanyMessage=#{accompanyMessage}
+        FROM accompany_pick WHERE accompanyPickNo=#{accompanyPickNo}
+    </update>
+
+    <!--//////////////////// DELETE 삭제 ////////////////////-->
+
+    <!--동행신청 삭제-->
+    <delete id="deletePick" parameterType="int">
+        DELETE FROM accompany_pick WHERE accompanyPickNo=#{accompanyPickNo}
+    </delete>
+
+    <!--동행신청 전체 삭제(테스트용)-->
+    <delete id="deletePickAll">
+        DELETE FROM accompany_pick
+    </delete>
+
+    <!--동행 확정 내역 삭제 (테스트용)-->
+    <delete id="deletePickConnnectionAll">
+        DELETE FROM accompany_connection
+    </delete>
+
+    <!--받은 동행신청에서 수락/거절 누르면 해당 내역에서 삭제하기-->
+    <delete id="deletePickReceive" parameterType="int">
+        DELETE FROM accompany_pick WHERE accompanyPickNo=#{accompanyPickNo}
+    </delete>
+
+    <!--보낸 동행신청에서 [신청취소] 누르면 해당 내역에서 삭제하기-->
+    <delete id="deletePickSpendCancel" parameterType="int">
+        DELETE FROM accompany_pick WHERE accompanyPickNo=#{accompanyPickNo}
+    </delete>
+
+
+
+</mapper>

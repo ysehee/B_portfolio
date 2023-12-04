@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bitstudy.app.dao.reservationPeopleMapper">
+
+    <select id="selectPrev" parameterType="String" resultType="ViewMyReservationDto">
+        select * from reservation_payment
+            left join package_info
+                on reservation_payment.packageNo = package_info.packageNo
+        where userId = #{userId} and reservation_payment.packageStartDate &lt; now()
+    </select>
+
+    <select id="selectNext" parameterType="String" resultType="ViewMyReservationDto">
+        select * from reservation_payment
+            left join package_info
+                on reservation_payment.packageNo = package_info.packageNo
+        where userId = #{userId} and reservation_payment.packageStartDate >= now()
+    </select>
+
+    <insert id="insertList" parameterType="java.util.List">
+        insert into reservation_payment (packageNo, userId, reservationName, reservationGender, reservationBirth, reservationNationality, reservationPhone, reservationEmail, packageStartDate, packagePrice, reservationTotalPrice, reservationPayDate)
+        values
+        <foreach collection="list" item="item" separator=",">
+            (#{item.packageNo}, #{item.userId}, #{item.reservationName}, #{item.reservationGender}, #{item.reservationBirth}, #{item.reservationNationality}, #{item.reservationPhone}, #{item.reservationEmail}, #{item.packageStartDate}, #{item.packagePrice}, #{item.reservationTotalPrice}, now())
+        </foreach>
+    </insert>
+
+    <delete id="delete" parameterType="map">
+        delete from reservation_payment where userId = #{userId} and packageNo = #{packageNo}
+    </delete>
+</mapper>

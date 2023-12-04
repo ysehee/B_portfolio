@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <typeAliases>
+        <!-- 별칭 정하는곳: 앞으로 sampleDto 라고 하면 com.bitstudy.app.sampleDto 로 알아들음 -->
+
+        <typeAlias alias="sampleDto" type="com.bitstudy.app.domain.sampleDto" />
+        <typeAlias alias="ReviewDto" type="com.bitstudy.app.domain.ReviewDto" />
+        <typeAlias alias="ReviewCommentDto" type="com.bitstudy.app.domain.ReviewCommentDto" />
+        <typeAlias alias="PackageDto" type="com.bitstudy.app.domain.PackageDto" />
+        <typeAlias alias="AccompanyDto" type="com.bitstudy.app.domain.AccompanyDto" />
+        <typeAlias alias="AccompanyCommentDto" type="com.bitstudy.app.domain.AccompanyCommentDto" />
+        <typeAlias alias="ReservationPeopleDto" type="com.bitstudy.app.domain.ReservationPeopleDto" />
+        <typeAlias alias="UserDto" type="com.bitstudy.app.domain.UserDto" />
+        <typeAlias alias="AccompanyPickDto" type="com.bitstudy.app.domain.AccompanyPickDto" />
+        <typeAlias alias="AccompanyLikeDto" type="com.bitstudy.app.domain.AccompanyLikeDto" />
+        <typeAlias alias="AccompanyConnectionDto" type="com.bitstudy.app.domain.AccompanyConnectionDto" />
+        <typeAlias alias="PackageContentDto" type="com.bitstudy.app.domain.PackageContentDto" />
+        <typeAlias alias="PackageCardDto" type="com.bitstudy.app.domain.PackageCardDto" />
+        <typeAlias alias="ViewMyReservationDto" type="com.bitstudy.app.domain.ViewMyReservationDto" />
+    </typeAliases>
+</configuration>

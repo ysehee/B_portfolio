@@ -1,0 +1,181 @@
+#packBigBox {
+    width: 1300px;
+    min-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(100px / 3);
+
+}
+
+#packSearchBox {
+    width: 900px;
+    height: 100px;
+
+    margin: 0 auto;
+    background-color: #fff;
+
+    line-height: 30px;
+
+    padding: 10px;
+    border-radius: 16px;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 50px;
+
+    position: relative;
+    transform: translateY(-50%);
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+#packDate {
+    width: 77%;
+    border-radius: 5px;
+}
+#submitButton{
+    width: 17%;
+    border-radius: 5px;
+    background: transparent;
+}
+/*날짜 선택할때 placeholder 적용 하는 css 시작*/
+/*input[type='date']::before {*/
+/*    content: attr(data-placeholder);*/
+/*    width: 100%;*/
+/*}*/
+
+/*input[type='date']:focus::before,*/
+/*input[type='date']:valid::before {*/
+/*    display: none;*/
+/*}*/
+/*날짜 선택할때 placeholder 적용 하는 css 끝*/
+.packBox {
+    width: 300px;
+    height: 320px;
+    /*border: 1px solid;*/
+    border-radius: 10px;
+    overflow: hidden;
+
+    cursor: pointer;
+    box-sizing: border-box;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+.packSearchBox_con1{
+    width: 70%;
+    display: flex;
+    justify-content: space-around
+}
+.packSearchBox_con2{
+    width: 30%;
+    display: flex;
+    justify-content: space-around
+}
+#packCategory,
+#packLocation,
+#packDate,
+#submitButton{
+    border: none;
+    font-size: 20px;
+}
+#packCategory,
+#packLocation,
+#packDate,
+#submitButton :hover{
+    cursor: pointer;
+}
+.packImg {
+    width: 300px;
+    height: 200px;
+    background-color: aquamarine;
+}
+
+.packImg img {
+    width: 100%;
+    height: 100%;
+}
+
+.packLocation {
+    width: 100%;
+    height: 30px;
+    /*background-color: pink;*/
+    font-size: 18px;
+    line-height: 32px;
+    padding: 0 5px;
+    color: #39A7FF;
+    /*border-bottom: 1px solid lightgray;*/
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.packTitle {
+    height: 55px;
+    /*background-color: antiquewhite;*/
+    padding: 5px 5px;
+    box-sizing: border-box;
+    font-size: 22px;
+    color: black;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    margin-top: 5px;
+}
+
+.packPrice {
+    float: right;
+    padding: 0 10px 10px 0;
+    box-sizing: border-box;
+    color: darkgreen;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.optionSize {
+    width: 47%;
+    border-radius: 5px;
+    padding-right: 3%;
+}
+
+
+input[type="date"]{
+    position: relative;
+    width: 100%;
+    /*height: 50px;*/
+    border: 1px solid rgba(128,128,128, 0.9);
+    border-radius: 10px;
+    /*background: 16px auto;*/
+    /*margin-bottom: 10px;*/
+    /* text-align: left; */
+}
+input[type="date"]::-webkit-clear-button,
+input[type="date"]::-webkit-inner-spin-button{display: none;}
+input[type="date"]::-webkit-calendar-picker-indicator{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    color: transparent;
+    cursor: pointer;
+}
+input[type="date"]::before{
+    content: attr(date-placeholder);
+    width: 100%;
+    /* padding-left:16px ; */
+}
+
+input[type="date"]:valid::before{
+    display: none;
+}
+input[date-placeholder]::before{
+    font-size: 20px;
+    /* text-align: center; */
+    padding-left: 10px;
+}
+
+

@@ -1,0 +1,349 @@
+.select_form{
+    width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+    box-sizing: border-box;
+    margin-top: 100px;
+}
+input{
+    outline: none;
+}
+
+
+
+
+
+
+.change_user_info{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.submit_btn{
+    /*border: 1px solid gray;*/
+    margin-bottom: 15px;
+}
+.submit_btn button,
+.delete_user_info_btn button,
+.back_user_info_btn button{
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+#modify_out {
+    display: block;
+}
+
+
+#modify_back{
+    display: none;
+}
+
+
+
+/* 영역 확인용 */
+.select_form{
+    /*border: 3px solid red;*/
+}
+/*.form_title{ !*메인 제목*!*/
+/*    font-family: Noto Sans KR,sans-serif;*/
+/*    font-weight: 800;*/
+/*    border-bottom: 1px solid #dbdbdb; !*밑줄*!*/
+
+/*}*/
+
+.delete_user_info{
+border: 1px solid red;
+}
+
+/* 새로 들어간 css */
+
+/* 폰트 */
+.font_800{
+    margin-bottom: 15px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 800;
+}
+.font_500 {
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+}
+
+.margin_50 {
+    line-height: 24px;
+    margin: 50px 0px 15px;
+}
+.margin_30 {
+    line-height: 24px;
+    margin: 30px 0px 5px;
+}
+
+.red_spot::after {
+    content: '';
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-left: 3px;
+    border-radius: 50%;
+    background: #ee1c25;
+    vertical-align: middle;
+}
+
+.form_title{ /*메인 제목*/
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 800;
+    border-bottom: 1px solid #dbdbdb; /*밑줄*/
+
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+}
+
+.change_user_info input{
+    width: 100%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 0 20px;
+    border-radius: 8px;
+
+    border: 1px solid rgb(219, 219, 219);
+    background-color: rgb(255, 255, 255);
+
+    font-size: 15px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 300;
+}
+
+#email_id {
+    width: 35%;
+}
+#email_add {
+    width: 40%;
+}
+#email_sel {
+    width: 20%;
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 0 20px;
+    border-radius: 8px;
+
+    border: 1px solid rgb(219, 219, 219);
+    background-color: rgb(255, 255, 255);
+
+    font-size: 15px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 300;
+
+}
+.pw_display {
+    display: none;
+}
+
+
+
+.button_css{
+    height: 50px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(219, 219, 219);
+
+    font-size: 16px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+
+    cursor: pointer;
+}
+
+.submit_btn button,
+.delete_user_info_btn button,
+.back_user_info_btn button{
+    width: 100%;
+    margin: auto;
+    display: block;
+
+    color: white;
+    background-color: #87C4FF;
+}
+
+.section_left{
+    width: 70%;
+    box-sizing: border-box;
+    padding: 20px 0px 20px 0px;
+    /*border: 3px solid blue;*/
+}
+
+.section_right{
+    width: 30%;
+    height: 750px;
+
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 20px 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 2px 2px 10px;
+}
+
+.change_email{
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.error{
+    margin-top: 5px;
+    font-size: 14px;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+    height: 20px;
+    color:red;
+}
+
+/* 탭메뉴 기능 css */
+.tab-content{
+    display: none;
+    /*display: block;*/
+    /*background: #ededed;*/
+    /*padding: 15px;*/
+}
+
+.tab-content.current{
+    display: block;
+}
+
+/*오른쪽 탭메뉴 css*/
+.mypage_title{
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 800;
+    border-bottom: 1px solid #dbdbdb;
+
+    padding-bottom: 15px;
+    box-sizing: border-box;
+    margin: 20px 10px 20px 10px;
+    margin-bottom: 10px;
+}
+
+.tabs {
+    margin-top: 70px;
+}
+
+.tab-link {
+
+    line-height: 70px;
+    height: 70px;
+
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 0px 18px;
+    /*border: 1px solid #dbdbdb;*/
+    margin-bottom: 15px;
+}
+.tab-link a {
+    display: block;
+}
+
+.tab-link:hover {
+    background-color: #E0F4FF;
+}
+.my_spot::before {
+    transform: translateX(-8px);
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-left: 5px;
+    border-radius: 50%;
+    background: #ee1c25;
+    vertical-align: middle;
+}
+
+
+    /* 탭에 toggle */
+/*.mypage_active{*/
+/*    background-color: #E0F4FF;*/
+/*}*/
+
+/*accompany 내동행*/
+.accompany_ul {
+    margin: 50px auto;
+    width: 80%;
+}
+.accompany_li {
+    height: 70px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(219, 219, 219);
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: #87C4FF;
+    color: white;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+    line-height: 70px;
+    font-size: 23px;
+
+}
+.accompany_li:hover {
+    /*background-color: #87C4FF;*/
+    background-color: #39A7FF;
+}
+
+.accompany_li a {display: block}
+
+/*accompany 내동행*/
+
+
+
+/* 내동행 서브 패이지 */
+.accompany_ul_sub{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin: 50px auto;
+    width: 80%;
+}
+.accompany_li_sub{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 60px;
+    box-sizing: border-box;
+    margin-top: 8px;
+    padding: 0 20px;
+    border-radius: 8px;
+    border: 1px solid rgb(219, 219, 219);
+    /*background-color: rgb(255, 255, 255);*/
+    background-color: #87C4FF;
+    color: white;
+    font-family: Noto Sans KR,sans-serif;
+    font-weight: 500;
+    line-height: 60px;
+    font-size: 14px;
+}
+.accompany_li_sub:hover {
+    /*background-color: #87C4FF;*/
+    background-color: #39A7FF;
+}
+.accompany_li_sub a {display: block}
+
+
+
+
+
+
+
+
+
+
+
+
