@@ -9,6 +9,7 @@
 <html>
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 	<link rel="stylesheet" href="<c:url value='/css/reviewBoard.css'/> ">
 	<link rel="stylesheet" href="<c:url value='/css/header.css'/> ">
 	<link rel="stylesheet" href="<c:url value='/css/1.index.css'/>">
@@ -21,11 +22,13 @@
 			height: 27px;
 			overflow: hidden;
 			cursor: pointer;
+			border-radius: 50%;
 		}
 		.heartBtn > img{
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
+			scale: 1.2;
 		}
 		input:focus {outline:none;}
 		/*a{*/
@@ -44,6 +47,16 @@
 		}
 		#newPost{
 			cursor: pointer;
+		}
+		.accompanyItem_div_content{
+			font-size: 16px;
+			color: darkgray;
+
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
 		}
 
 	</style>
@@ -85,7 +98,7 @@
 	</div>
 </header>
 <div class="banner_img">
-	<img src="<c:url value='/img/review_content_save_banner.jpeg'/>" alt="board_long_banenr">
+	<img src="<c:url value='/img/accListBanner.jpg'/>" alt="accListBanner">
 </div>
 <%----------------------------------------------------------------------------------------------------%>
 
@@ -138,15 +151,15 @@
 <div class="accompanyItem_div" style=" width: 1300px; margin: 0 auto;" >
 	<ul style="display: flex; justify-content: space-between; flex-direction: row; flex-wrap: wrap;">
 		<c:forEach var="accompanyDto" items="${accompanyList}">
-			<li class="accompanyItem" style="border: 1px solid #a9a9a9; border-radius: 16px; width: calc((100%  - (20px * 3))/ 4); margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); position: relative">
+			<li class="accompanyItem" style="border: 1px solid #a9a9a9; border-radius: 16px; width: calc((100%  - (20px * 3))/ 4); margin-bottom: 20px; box-shadow: 0 6px 20px rgba(0,0,0,0.2); padding-top: 10px; position: relative">
 				<a href="<c:url value="/accompany/read?accompanyNo=${accompanyDto.accompanyNo}"/>">
 
 						<%--		<div class="accompanyNo">동행글 번호: ${accompanyDto.accompanyNo}</div>--%>
-					<div style="padding-left: 15px">
+					<div style="padding-left: 15px; font-size: 12px;">
 						<input class="accompanyNo" value="${accompanyDto.accompanyNo}" style="display: none; padding-left: 15px; ">No : ${accompanyDto.accompanyNo}
 					</div>
 
-					<div class="accompanyItem_div_top" style=" display: flex; justify-content: space-between; margin-top: 5px">
+					<div class="accompanyItem_div_top" style=" display: flex; justify-content: space-between; font-size: 14px; margin-top: 5px";>
 						<div style="padding-left: 15px">모집인원:  ${accompanyDto.accompanyRecruit}</div>
 						<div style="padding-right: 15px">여행지역: ${accompanyDto.accompanyArea}</div>
 					</div>
@@ -161,16 +174,16 @@
 							<%--								<img class="heart_empty" style=" z-index: 1;" src="<c:url value="/img/like/heart_empty.png"></c:url>">--%>
 							<%--							</c:if>--%>
 							<%--						</div>--%>
-						<div class="accompanyItem_div_viewCount" style="position: absolute; bottom: 0; right: 15px; padding: 3px; background: rgba(255,255,255,0.65); border-radius: 10px 10px 0px 0px; display: flex; justify-content: space-between"; >
+						<div class="accompanyItem_div_viewCount" style="position: absolute; bottom: 0; right: 15px; padding: 3px; font-size: 12px; background: rgba(255,255,255,0.65); border-radius: 10px 10px 0px 0px; display: flex; justify-content: space-between"; >
 							<div>조회수: ${accompanyDto.accompanyViewCnt}</div>
 							<div>찜 수: ${accompanyDto.accompanyLikeCnt}</div>
 						</div>
 					</div>
 					<div class="accompanyItem_div_content_title" style="font-size: 20px; color: dimgray; font-weight: 500;">${accompanyDto.accompanyTitle}</div>
-					<div class="accompanyItem_div_content" style="font-size: 16px; color:darkgray">${accompanyDto.accompanyContent}</div>
+					<div class="accompanyItem_div_content" >${accompanyDto.accompanyContent}</div>
 					<br>
 				</a>
-				<div onclick="heartClk(this)" class="heart_empty heartBtn" style="position: absolute; top: 50px; right:10px;">
+				<div onclick="heartClk(this)" class="heart_empty heartBtn" style="position: absolute; top: 50px; right:10px; margin-top: 10px;">
 					<input type="hidden" class="accompanyNo" name="accompanyNo" value="${accompanyDto.accompanyNo}">
 					<c:if test="${fn:contains(likeList, accompanyDto.accompanyNo)}">
 						<img class="heart_empty" style=" z-index: 1;" src="<c:url value="/img/like/heart_fill.png"></c:url>">
@@ -254,10 +267,10 @@
 					console.log(data);
 
 					if(data == 0){
-						alert("찜하기 성공")
+						alert("해당 동행글에 '찜' 하였습니다")
 					}
 					else if(data == 1){
-						alert("찜하기 취소")
+						alert("해당 동행글에 대한 '찜' 을 취소했습니다")
 					}
 					else{
 						alert("에러 발생!")

@@ -52,6 +52,17 @@
 		width: 800px;
 		/*box-shadow: rgba(25, 25, 25, 0.5) 6px 6px 10px;*/
 	}
+
+	.accompanyItem_div_content{
+		font-size: 16px;
+		color: darkgray;
+
+		overflow: hidden;
+		text-overflow: ellipsis;
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;
+	}
 </style>
 
 <style>
@@ -334,7 +345,7 @@
 										</div>
 									</div>
 									<div class="accompanyItem_div_content_title" style="font-size: 20px; color: dimgray; font-weight: 500;">${accompanyDto.accompanyTitle}</div>
-									<div class="accompanyItem_div_content" style="font-size: 16px; color:darkgray">${accompanyDto.accompanyContent}</div>
+									<div class="accompanyItem_div_content">${accompanyDto.accompanyContent}</div>
 									<br>
 								</a>
 								<div onclick="heartClk(this)" class="heart_empty heartBtn" style="position: absolute; top: 50px; right:10px;">

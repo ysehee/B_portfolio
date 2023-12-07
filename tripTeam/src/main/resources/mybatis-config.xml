@@ -8,7 +8,6 @@
     <typeAliases>
         <!-- 별칭 정하는곳: 앞으로 sampleDto 라고 하면 com.bitstudy.app.sampleDto 로 알아들음 -->
 
-        <typeAlias alias="sampleDto" type="com.bitstudy.app.domain.sampleDto" />
         <typeAlias alias="ReviewDto" type="com.bitstudy.app.domain.ReviewDto" />
         <typeAlias alias="ReviewCommentDto" type="com.bitstudy.app.domain.ReviewCommentDto" />
         <typeAlias alias="PackageDto" type="com.bitstudy.app.domain.PackageDto" />
