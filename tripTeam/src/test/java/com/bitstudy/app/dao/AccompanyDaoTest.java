@@ -110,7 +110,6 @@ public class AccompanyDaoTest {
     public void update() {
 
     }
-
     @Test
     public void chkLikeUser() {
 //        for (int i = 0; i < 10; i++) {
@@ -123,7 +122,6 @@ public class AccompanyDaoTest {
         System.out.println(result);
 //        }
     }
-
     @Test
     public void increaseViewCnt() {
         assertTrue(accompanyDao.increaseViewCnt(2) == 1);
