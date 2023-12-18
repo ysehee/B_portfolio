@@ -55,8 +55,12 @@ public class JoinController {
     @GetMapping("/joinCreatedId/save")
     public String joinCreatedIdsave(UserDto user, Model m) throws Exception {
 
+        System.out.println("컨트롤러-insert전:" + user);
+
             /* 회원가입 시키기 */
             userService.insertUser(user);
+
+        System.out.println("컨트롤러-insert후:" + user);
             return "redirect:/login/login";
         }
 
