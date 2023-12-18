@@ -22,7 +22,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>트렌디한 등산앱, 오르리청산-orri</title>
+	<title>Blue Horizon 블루호라이즌 마이페이지 - 보낸 동행 신청</title>
 	<link rel="icon" href="<c:url value='${contextPath}/img/favicon.png' />" alt="언덕 아이콘  제작자: Saepul Nahwan - Flaticon">
 	<link rel="stylesheet" href="<c:url value='/css/header.css' />">
 	<link rel="stylesheet" href="<c:url value='/css/1.index.css' />">

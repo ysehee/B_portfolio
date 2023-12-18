@@ -6,7 +6,7 @@
 <head>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-	<title>동행신청</title>
+	<title>동행신청하기</title>
 	<style>
 		.accPickPopup {
 			width: 100%;

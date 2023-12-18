@@ -51,11 +51,13 @@
 			height: 43px;
 			overflow: hidden;
 			cursor: pointer;
+			border-radius: 50%;
 		}
 		.heartBtn > img{
 			width: 100%;
 			height: 100%;
 			box-sizing: border-box;
+			scale: 1.2;
 		}
 		.thumImg{
 			width: 100%;
@@ -170,18 +172,49 @@
 					<%--		<input name="accompanyTripStartDate" value="${accompanyDto.accompanyTripStartDate}">--%>
 					<div style=" display: flex; gap:20px;  border: 1px solid rgb(219, 219, 219); border-radius: 10px; padding: 10px;">
 						<select id="accompanyArea" name="accompanyArea" class="accompanyArea "  ${mode=="new"?"":"disabled"}>
+
+						<c:if test="${ mode!='new'}">
+							<option value="${accompanyDto.accompanyArea}">
+								<c:choose>
+									<c:when test="${accompanyDto.accompanyArea eq 'korea'}">
+										국내
+									</c:when>
+									<c:when test="${accompanyDto.accompanyArea eq 'europe'}">
+										유럽
+									</c:when>
+									<c:when test="${accompanyDto.accompanyArea eq 'asia'}">
+										아시아
+									</c:when>
+									<c:when test="${accompanyDto.accompanyArea eq 'america'}">
+										아메리카
+									</c:when>
+									<c:otherwise>
+										Unknown
+									</c:otherwise>
+								</c:choose>
+							</option>
+						</c:if>
+						<c:if test="${ mode=='new'}">
 							<option value="korea">국내</option>
 							<option value="asia">아시아</option>
 							<option value="america">아메리카</option>
 							<option value="europe">유럽</option>
+						</c:if>
 						</select>
 						<input id="accompanyRecruitInput" type="hidden" value="${accompanyDto.accompanyRecruit}" style="margin-right: 20px">
 						<select id="accompanyRecruit" name="accompanyRecruit" class="accompanyRecruit " ${mode=="new"?"":"disabled"} >
-							<option value="2">2명</option>
-							<option value="3">3명</option>
-							<option value="4">4명</option>
-							<option value="5">5명</option>
-							<option value="6">6명</option>
+
+							<c:if test="${ mode!='new'}">
+								<option value="${accompanyDto.accompanyRecruit}">${accompanyDto.accompanyRecruit}명</option>
+							</c:if>
+
+							<c:if test="${ mode=='new'}">
+								<option value="2">2명</option>
+								<option value="3">3명</option>
+								<option value="4">4명</option>
+								<option value="5">5명</option>
+								<option value="6">6명</option>
+							</c:if>
 						</select>
 						<div class="accom_date" style="margin-top: 5px;">
 							<%-- 날짜 계산하는 part입니다. --%>
@@ -194,6 +227,7 @@
 					<%--	<input name="accompanyArea" value="${accompanyDto.accompanyArea}">--%>
 					<c:if test="${ mode!='new'}">
 						<div onclick="heartClick(this)" class="heart_empty heartBtn">
+							<input type="hidden" class="accompanyNo" name="accompanyNo" value="${accompanyDto.accompanyNo}">
 							<c:if test="${fn:contains(likeList, accompanyDto.accompanyNo)}">
 								<img class="heart_empty" src="<c:url value="/img/like/heart_fill.png"></c:url>">
 							</c:if>
@@ -291,7 +325,7 @@
 	let heartClick = function(e){
 		if($('#loginUserId').val() != null && $('#loginUserId').val() != ''){
 			Rdata = { // 보내줄 값
-				accompanyNo : $(e).parent().children('.accompanyNo').val(),
+				accompanyNo : $(e).children('.accompanyNo').val(),
 				accompanyLikeUser : $('#loginUserId').val(),
 			}
 
@@ -307,10 +341,10 @@
 					console.log(data);
 
 					if(data == 0){
-						alert("찜하기 성공")
+						alert("해당 동행글에 '찜' 하였습니다")
 					}
 					else if(data == 1){
-						alert("찜하기 취소")
+						alert("해당 동행글에 대한 '찜' 을 취소했습니다")
 					}
 					else{
 						alert("에러 발생!")

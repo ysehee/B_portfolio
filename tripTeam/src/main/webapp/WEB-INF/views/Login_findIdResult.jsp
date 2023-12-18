@@ -20,7 +20,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>오르리청산-orri :: 로그인</title>
+    <title>Blue Horizon 블루호라이즌 - 아이디찾기</title>
     <link rel="icon" href="<c:url value='${contextPath}/img/favicon.png' />" type="image/x-icon" alt="언덕 아이콘  제작자: Saepul Nahwan - Flaticon">
     <link rel="stylesheet" href="<c:url value='/css/header.css' />">
     <link rel="stylesheet" href="<c:url value='/css/1.index.css' />">

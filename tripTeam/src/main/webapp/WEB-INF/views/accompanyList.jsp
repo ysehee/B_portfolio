@@ -15,7 +15,7 @@
 	<link rel="stylesheet" href="<c:url value='/css/1.index.css'/>">
 	<link rel="stylesheet" href="<c:url value='/css/common.css'/> ">
 
-	<title>동행글 게시판</title>
+	<title>Blue Horizon 블루호라이즌 동행하기 리스트</title>
 	<style>
 		.heartBtn{
 			width: 27px;

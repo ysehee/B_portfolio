@@ -83,7 +83,7 @@
 <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css" />
 
 <div class="accPickPopup">
-	<h2 class="accFont8" style="text-align: center">${loginUserId} 님 에게 동행신청하기</h2>
+	<h2 class="accFont8" style="text-align: center">동행신청하기</h2>
 
 	<div class="accPickInputBox">
 			<input type="hidden" name="accompanyNo" id="childAccompanyNo" readonly>
@@ -101,7 +101,7 @@
 		</div>
 		<div class="accPickInput">
 			<div>동행 메세지</div>
-			<input type="text" name="accompanyMessage" id="childAccompanyMessage" placeholder="동행글 작성자에게 보낼 메세지를 입력하세요. (예: 같이 여행가요~) ">
+			<input type="text" name="accompanyMessage" id="childAccompanyMessage" placeholder="동행글 작성자에게 보낼 메세지를 입력하세요. ">
 		</div>
 			<input type="hidden" name="accompanyApyDate" id="childAccompanyApyDate">
 	</div>

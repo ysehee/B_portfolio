@@ -11,7 +11,7 @@
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-	<title>동행글 본문</title>
+	<title>Blue Horizon 블루호라이즌 동행하기</title>
 	<link rel="stylesheet" href="<c:url value='/css/common.css'/> ">
 	<link rel="stylesheet" href="<c:url value='/css/header.css'/> ">
 	<link rel="stylesheet" href="<c:url value='/css/1.index.css'/>">
