@@ -174,6 +174,11 @@ create table user
     
 
 
+
+INSERT INTO tripteam.user (userNo, userId, userPw, userName, userGender, userBirth, userPhoneNo, userEmail, userRegDate) VALUES (6, 'sehee1', 'asdf1234!', '윤세희', 'female', '19951129', '01012345678', 'sehee1@gmail.com', '2023-11-30 02:26:51');
+
+
+
 insert into accompany_main values(	1,	'sehee1',	 '연말 기념 유럽 여행 한달동안 다녀오실 분 구합니다',	'europe.png',	'같이 유럽여행 다녀오실 분! 연말 기념 유럽 여행 한달동안 다녀오실 분 구합니다',	2,	'2023-12-01',	'2023-12-31',	'europe',	now(),	0,	1	)	;
 insert into accompany_main values(	2,	'sehee1',	'12.23-12.25 오사카 동행 구해요 ',	'asia.png',	'동행 다시 구해야해서 빠르게 구해볼게요! 메시지 제가 못보면 오픈카톡 연락주세요 https:  open.kakao.com o !a!a!a 23일 21시 출국일정이라 이땐 숙소가서 바로잘거같구 동행은 24,25일 저녁출국전까지 자유롭게 다닐 시간 같이 다녀요 계획은 다 짜둔 상황이라서 일정공유하고 맞춰도 보고 보완도 해보려구요 *현재 숙소 예약 다 완료했습니다:  *마지막날 교토 간단 구경 갑니다 *도착 야간버스타고 난바역 이동해서 난바역 바로 근처 숙소 이동할거 같아요! 따로 움직이다 저녁식사나 술만 한잔해도 좋을것 같구 같이 움직이고 싶으면 하루종일 동행도 좋구요! 원래 혼자 가려고 했었고 혼자 태국 후쿠오카 다녀왔었습니다  아직 기한이 남아서 충분히 대화해보고 계획도 같이 짜보고 했으면 좋겠습니다!',	4,	'2023-12-23',	'2023-12-25',	'asia',	now(),	1,	3	)	;
 insert into accompany_main values(	3,	'sehee1',	'3박 4일 퀘벡시티 가실 분 구합니다!',	'america.png',	'함께 사진 찍어주고 재밌게 여행 다녀요❣️',	6,	'2024-02-20',	'2024-02-23',	'america',	now(),	2,	5	)	;
