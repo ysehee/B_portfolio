@@ -185,7 +185,7 @@
                 <div class="login_input">
                     <form action="<c:url value='/login/login'/>"  method="post" onsubmit="return loginform_check()">
                         <div class="name">
-                            <input class="Check" id="id" name="id"  type="text" placeholder="아이디를 입력해 주세요." maxlength="20" value="sehee1" onblur="loginform_check()">
+                            <input class="Check" id="id" name="id"  type="text" placeholder="아이디를 입력해 주세요." maxlength="20" value="user" onblur="loginform_check()">
                             <div id="idError" class="error "><%--${URLDecoder.decode(msg)}--%></div>
                         </div>
                         <div class="password">
