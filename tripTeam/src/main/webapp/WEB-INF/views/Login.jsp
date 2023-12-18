@@ -185,11 +185,11 @@
                 <div class="login_input">
                     <form action="<c:url value='/login/login'/>"  method="post" onsubmit="return loginform_check()">
                         <div class="name">
-                            <input class="Check" id="id" name="id"  type="text" placeholder="아이디를 입력해 주세요." maxlength="20" value="${cookie.id.value}" onblur="loginform_check()">
+                            <input class="Check" id="id" name="id"  type="text" placeholder="아이디를 입력해 주세요." maxlength="20" value="sehee1" onblur="loginform_check()">
                             <div id="idError" class="error "><%--${URLDecoder.decode(msg)}--%></div>
                         </div>
                         <div class="password">
-                            <input class="Check" id="pw" name="pwd" type="password" placeholder="비밀번호를 입력해 주세요." maxlength="20" value="${cookie.pwd.value}" onblur="loginform_check()">
+                            <input class="Check" id="pw" name="pwd" type="password" placeholder="비밀번호를 입력해 주세요." maxlength="20" value="asdf1234!" onblur="loginform_check()">
                             <div id="pwError" class="error"></div>
                         </div>
 
