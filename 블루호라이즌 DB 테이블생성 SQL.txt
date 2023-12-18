@@ -178,7 +178,11 @@ create table user
 
 
 
-INSERT INTO tripteam.user (userNo, userId, userPw, userName, userGender, userBirth, userPhoneNo, userEmail, userRegDate) VALUES (6, 'sehee1', 'asdf1234!', '윤세희', 'female', '19951129', '01012345678', 'sehee1@gmail.com', '2023-11-30 02:26:51');
+INSERT INTO tripteam.user (userNo, userId, userPw, userName, userGender, userBirth, userPhoneNo, userEmail, userRegDate) VALUES (1, 'sehee1', 'asdf1234!', '윤세희', 'female', '19951129', '01012345678', 'sehee1@gmail.com', '2023-11-30 02:26:51');
+
+INSERT INTO tripteam.user (userNo, userId, userPw, userName, userGender, userBirth, userPhoneNo, userEmail, userRegDate) VALUES (2, 'user', 'asdf1234!', '홍길동', 'female', '19931111', '01012345678', 'user@gmail.com', '2023-11-30 02:26:51');
+
+INSERT INTO tripteam.user (userNo, userId, userPw, userName, userGender, userBirth, userPhoneNo, userEmail, userRegDate) VALUES (3, 'asdf', 'asdf1234!', '김김김', 'female', '19901111', '01012345678', 'asdf@gmail.com', '2023-11-30 02:26:51');
 
 
 
@@ -196,28 +200,66 @@ insert into accompany_main values(	6,	'sehee1',	'1월에 2주 정도 캐나다 �
 insert into accompany_main values(	7,	'sehee1',	'이번달 말 2박3일 제주도 가실분 구해요',	'korea.png',	'같이 2박3일 제주도 여행가실분 구해요!',	2,	'2023-12-28',	'2023-12-30',	'korea',	now(),	50,	2	)	;
 insert into accompany_main values(	8,	'sehee1',	'12월 마지막~1월 첫주 에 동유럽 여행!!',	'europe.png',	'안녕하세요? 12월 마지막~1월 첫주 에 동유럽 여행 계획이신분 있으세요? 여행사로 여행 계획 중입니다. 여자1분 같이 동행하고 싶습니다.',	3,	'2023-12-24',	'2024-01-08',	'europe',	now(),	51,	14	)	;
 insert into accompany_main values(	9,	'sehee1',	'12 27-1 3 엘에이 동행하실분구해옹!',	'america.png',	'먼저 저는 동생과 동행합니다. 엘에이가 넓고 볼게 많다보니까 될수있으면 택시값부터 식비 이렇게 더 효율적이게 소비하고 싶으신 분들은 연락주세요! 그리고 중간에 참석하셔도 됩니당!',	4,	'2023-12-27',	'2024-01-03',	'america',	now(),	3,	52	)	;
-insert into accompany_main values(	10,	'sehee1',	'삿포로, 훗카이도 동행하실 분 구합니다! 1월 6일 ~ 9일 아니면 1월 언제든! 인원은 상관없습니다~!',	'asia.png',	'현재 동행은 없고 혼자입니다. 정확한 날짜는 같이 맞춰요! 1월이면 다 좋습니다. 친해지는 것을 좋아해서 금방 친해지는 게 제 장점입니다! 나이는 00년생으로 24살입니다. 성별은 상관없고 나이는 20대면 좋을 거 같아요!! 인원은 상관없습니다! 한 분이어도 좋아요! 사진 찍는 걸 좋아하며 찍어주는 것도 좋아합니다. 같이 인생샷 찍어요~~ 출발하기 전에 얼굴을 한 번 보든 연락이라도 해서 아주 조금이라도 친해진 후 출발하면 좋을 거 같아요! 관심 있으신 분은 메세지 주시면 인스타 아이디 알려드릴게요!! 디엠으로 연락해요! ',	2,	'2024-01-06',	'2024-01-09',	'asia',	now(),	4,	87	)	;
-insert into accompany_main values(	11,	'sehee1',	'연말제주도 해돋이 여행가실분',	'korea.png',	'1.일정 12월30일 11:35김포출발 제주12:45도착  애월카페 -안덕유리바닥보트 썬셋투어 - 안덕담보라 1박방3화장실3거실  바베큐 31일 약천사 외돌개 새연교 휴애리 동백 공원등 협의 -성산숙소이동 더베스트성산 객실2개 -해돋이 전야제 1일 광치기해변 해돋이-아침떡국 -함덕카페 혹은 닭머르해안길산책 후 1시30분 제주출발 2.40대남녀 6명현재 타 여행카페에서 5명확정  숙소때문에 남자분한분 모십니다 3.예상비용은 35만원정도 남거나모자랄시 n분1  항공권은 별도며 개별구매해주세요. 가실분은 비행기부터 예매해주십시오. 최대한 +-1시간으로 맞춰주셔야 일정에 차질이 없습니다. 제주도는 음식값도 비싸고 비행기등등 돈이 많이들어가니 돈에 민감하신분은 신청하지 말아주세요 작년에 흐려서 해돋이를 못봐서 아쉬워서 올해다시 가려고합니다.배려매너 있고 즐겁게 여행하실분 연락주세요^^',	2,	'2023-12-30',	'2024-01-01',	'korea',	now(),	20,	32	)	;
-insert into accompany_main values(	12,	'sehee1',	'12 25일부터 1월1일까지 뉴욕여행 동행 구해요!!',	'america.png',	'안녕하세요. 12월 25일 크리스마스부터 1월 1일까지 뉴욕 여행을 갈 예정입니다. 해당 기간동인 마이리얼트립을 통해서 근교보스턴, 워싱턴 여행이나 식사 같이 하면서 유명 핫플에 같이 가실 분들 말씀해주세요!!',	5,	'2023-12-25',	'2024-01-01',	'america',	now(),	21,	15	)	;
-insert into accompany_main values(	13,	'sehee1',	'4월중순 부터 한달정도 서유럽 같이가실 동행구해요!',	'europe.png',	'23살 대학생 남자이고 4월에 전역이라 영국,프랑스,스위스정도 가볼려고 계획하고 있습니다확실히 정해진건 없어요!  여기저기 돌아다니고 먹는거 정도 좋아합니다! 아직 시간이 많이 남아서 천천히 계획할려고 하는데 동행있으면 좋을것같아서 구해봅니당 계획을 어느정도 바꿀수있으니까 편하게 쪽지 남겨주세요!!',	6,	'2024-04-14',	'2024-04-28',	'europe',	now(),	2,	32	)	;
-insert into accompany_main values(	14,	'sehee1',	'한라산 동행',	'korea.png',	'픽업 가능 한라산 같이 등반해여!!',	4,	'2023-12-24',	'2023-12-25',	'korea',	now(),	21,	45	)	;
-insert into accompany_main values(	15,	'sehee1',	'홍콩 카페 바 투어하고 디즈니가실분',	'asia.png',	'혼자여행가요 홍콩 20년만에가는거라 초행이나마찬가지.. 10잉 오전11 도착 15일새벽출국이고 침사추이에있을거에요 30 40대 여자분이면 좋겠어요 참고로 전 메이크업안하고 편하게다닐거에요.. 레깅스+크락스',	4,	'2024-01-15',	'2024-01-21',	'asia',	now(),	50,	78	)	;
-insert into accompany_main values(	16,	'sehee1',	'부산 or 경주 여행 동행 찾아요',	'korea.png',	'맛집 카페 좋아하고 운동 좋아합니다. 경주나 부산 동행하실분 찾아요 저는 서울에서 출발합니다',	4,	'2023-12-23',	'2023-12-24',	'korea',	now(),	60,	65	)	;
-insert into accompany_main values(	17,	'sehee1',	'2월 셋째 넷째 주 모로코 or 멕시코 여행 동행 구해봅니다.',	'america.png',	'직업상 이유로 여행 일정은 조율이 어려울 것 같습니다. 평소 가고 싶었던 두 나라 중 한곳으로 여행을 다녀오고 싶은데 혼자가는 것 보다 동행이 있으면 여러모로 더 만족스러운 여행이 될 것 같습니다. 33살 남자 이구요 동행으로는 20대 중반에서 30대 중반 남성분이면 좋겠다는 생각입니다. 모집인원은 4명이내로 생각하고 있습니다. 나라도 아직 결정하지 않은 만큼 여행 루트와 세부일정은 충분이 상의하여 결정해보고 싶네요. ',	5,	'2023-02-13',	'2024-02-24',	'america',	now(),	21,	32	)	;
-insert into accompany_main values(	18,	'sehee1',	'1230-0105 같이 암스테르담 다닐 동행 구해요',	'europe.png',	'혼자 왔는데 같이 전시보거나 카페 다닐 분 구해요:  워낙 무계획 여행을 좋아해서 카페 전시 아니어도 아무거나 다 좋아요!',	2,	'2023-12-30',	'2024-01-04',	'europe',	now(),	21,	12	)	;
-insert into accompany_main values(	19,	'sehee1',	'경주 여행갑니다!',	'korea.png',	'각자 여행하다가 밥만 같이 먹어도 되고, 같이 여행다녀도 됩니다! 전 서울 출발 12시 전 도착입니다!',	3,	'2023-12-23',	'2023-12-25',	'korea',	now(),	14,	15	)	;
-insert into accompany_main values(	20,	'sehee1',	'3박 4일 몽골 투어2월달 아무때나 ',	'asia.png',	'3박 4일 정도 몽골 여행 패키지 같이 가실 분 구합니다 2월 아무때나 같이 가시고 사진찍는거 좋아하시는 분이 함께했으면 좋겠어요 : ',	3,	'2024-02-05',	'2024-02-08',	'asia',	now(),	32,	18	)	;
-insert into accompany_main values(	21,	'sehee1',	'크리스마스 시즌 뉴욕여행',	'america.png',	'뉴욕 동행없이 혼자인데 2년전에 혼자여행왔던 경험이있네요. 28살 여자구 성격밝아요! 낮많이 가리시더라도 괜찮습니당. 이번여행에서는 예쁜곳 많이가서 사진도 많이찍고 소중한 추억들 간직하고싶어요. 저에겐 특별한 한해이고 제가 뉴욕을 넘 사랑해서 ㅎㅎㅎ.. 편하게 남녀노소 꼭 연락주세요:  12월 24~1월 1일 일정입니다. 풀로 가능하지않아도 일정맞는 날 맞춰서 같이 유동적으로 이동해도 좋아요!!',	4,	'2023-12-24',	'2024-01-01',	'america',	now(),	41,	19	)	;
-insert into accompany_main values(	22,	'sehee1',	'Looking for someone who travels with me within South Korea or around Seoul! ^-^',	'korea.png',	'Hi! Im looking for someone who wants to travel with me within South Korea or around Seoul :  Im a 23y o girl from Germany and currently studying abroad in Japan. Ill be spending 2 days in Busan with a friend from Japan and she goes back on the evening of August 24, but I want to explore more of South Korea! ^^ Im planning to fly back to Japan around August 29 from Seoul. We could just travel around Seoul or visit some other cities like Gyeongju or wherever you want to go!! I want to explore Korean culture, food etc. :  I can speak German, English and Japanese sadly no Korean ><  If you re interested, please contact me!! It s no problem if you re only available on some days between 12 22 and 12 26! ',	4,	'2023-12-22',	'2023-12-26',	'korea',	now(),	21,	17	)	;
-insert into accompany_main values(	23,	'sehee1',	'스페인 포르투갈 패키지 함께 가실분!!',	'europe.png',	'저는 30대 초반 여자구요~ 스페인 포르투갈 패키지 함께가실분 구해요~~ 서로 대화도하구 사진도 잘 찍어드려요~^^',	4,	'2023-12-28',	'2024-01-05',	'europe',	now(),	18,	13	)	;
-insert into accompany_main values(	24,	'sehee1',	'내년 6월 미국 동서부 여행할 20대 여성 동행 찾아요 : ',	'america.png',	'내년 6월 14일부터 7월1일연장가능  미국 여행할 동행 구합니다 아직 구체적인 계획은 세우지 않아서 괜찮다면 케나다도 잠깐 가고싶어요! 계획 세우는거 좋아하고 가기 전까지 같이 만나서 계획도 세워보고싶어요 ㅎㅎ',	4,	'2024-06-14',	'2024-07-01',	'america',	now(),	14,	21	)	;
-insert into accompany_main values(	25,	'sehee1',	'스페인 이비자섬 숙소쉐어&동행',	'europe.png',	'저는 20대 여자고 같이 여행도 즐기고 클럽이랑 파티두 같이 가실 분~! 카톡으로 하셔야 빠른 확인 가능해요! ',	6,	'2024-01-01',	'2024-01-05',	'europe',	now(),	5,	2	)	;
-insert into accompany_main values(	26,	'sehee1',	'대구출발 서울 구경 같이 하실 분이요',	'korea.png',	'서울 핫플 좀 돌아 볼 생각입니다. 경기도 지역도 지역도 함께요. 사업 구상 차 가는 거라 목적 비슷한 분 있으시면 동행해요~일정은 더 늘어나도 됩니다. 숙은 각자 해결해도 식은 공동으로 합니다. 당연히 운전은 제몫이고요. 남녀 상관 없습니다만 대화가 좀 통하는 분이면 좋겠네요~',	6,	'2024-01-04',	'2024-01-06',	'korea',	now(),	8,	5	)	;
-insert into accompany_main values(	27,	'sehee1',	'24.01.21 저녁 마카오 동행 구해요!',	'asia.png',	'21일 아침까지 친구랑 홍콩 여행하고 21일 낮부터 마카오 혼여행할 예정입니다! 밤에 마카오 혼자 다니기 무서워서 동행 구해봅니다! 22살 여성이고, mbti는 entj입니다:-  동행자는 20대 여성분이시면 좋겠어요! 남성분도 가능!',	2,	'2024-12-21',	'2024-12-22',	'asia',	now(),	7,	6	)	;
-insert into accompany_main values(	28,	'sehee1',	'ED SHREEN 파리 공연 동행구해요!',	'europe.png',	'에드시런 공연시작 전에 만나서 같이 들어가고 끝나고 같이 갈사람 구합니다! 일단 두명구했고 둘다 20대 초반 여자입니다!  {여자만 연락부탁드려요혹시 숙소가 위치가 비슷하면 ubar 또는 bolt타고 같이 집까지 갔으면 합니당! ❗️',	2,	'2024-01-24',	'2024-01-25',	'europe',	now(),	6,	4	)	;
-insert into accompany_main values(	29,	'sehee1',	'Looking for 2ppl to go to six flags w  me and my friend ',	'america.png',	'I have one friend and we are looking for two more ppl to go to six flags together!!',	5,	'2024-01-04',	'2024-01-08',	'america',	now(),	1,	2	)	;
-insert into accompany_main values(	30,	'sehee1',	'3,4,5 월 중 동유럽 패키지 구합니당',	'europe.png',	'제가 여자라 같은 동성이었으면 좋겠고 나이대는 상관없습니당! 패키지 상품은 180~200초반으로 생각하고 있고 시기는 3,4,5월 모두 괜찮습니당 같이 맞춰나가봐요! 사진 찍는게 취미라 예쁘게 찍어드릴게요 편하게 연락주세용',	6,	'2024-03-01',	'2024-05-31',	'europe',	now(),	7,	7	)	;
+insert into accompany_main values(	10,	'user',	'삿포로, 훗카이도 동행하실 분 구합니다! 1월 6일 ~ 9일 아니면 1월 언제든! 인원은 상관없습니다~!',	'asia.png',	'현재 동행은 없고 혼자입니다. 정확한 날짜는 같이 맞춰요! 1월이면 다 좋습니다. 친해지는 것을 좋아해서 금방 친해지는 게 제 장점입니다! 나이는 00년생으로 24살입니다. 성별은 상관없고 나이는 20대면 좋을 거 같아요!! 인원은 상관없습니다! 한 분이어도 좋아요! 사진 찍는 걸 좋아하며 찍어주는 것도 좋아합니다. 같이 인생샷 찍어요~~ 출발하기 전에 얼굴을 한 번 보든 연락이라도 해서 아주 조금이라도 친해진 후 출발하면 좋을 거 같아요! 관심 있으신 분은 메세지 주시면 인스타 아이디 알려드릴게요!! 디엠으로 연락해요! ',	2,	'2024-01-06',	'2024-01-09',	'asia',	now(),	4,	87	)	;
+insert into accompany_main values(	11,	'user',	'연말제주도 해돋이 여행가실분',	'korea.png',	'1.일정 12월30일 11:35김포출발 제주12:45도착  애월카페 -안덕유리바닥보트 썬셋투어 - 안덕담보라 1박방3화장실3거실  바베큐 31일 약천사 외돌개 새연교 휴애리 동백 공원등 협의 -성산숙소이동 더베스트성산 객실2개 -해돋이 전야제 1일 광치기해변 해돋이-아침떡국 -함덕카페 혹은 닭머르해안길산책 후 1시30분 제주출발 2.40대남녀 6명현재 타 여행카페에서 5명확정  숙소때문에 남자분한분 모십니다 3.예상비용은 35만원정도 남거나모자랄시 n분1  항공권은 별도며 개별구매해주세요. 가실분은 비행기부터 예매해주십시오. 최대한 +-1시간으로 맞춰주셔야 일정에 차질이 없습니다. 제주도는 음식값도 비싸고 비행기등등 돈이 많이들어가니 돈에 민감하신분은 신청하지 말아주세요 작년에 흐려서 해돋이를 못봐서 아쉬워서 올해다시 가려고합니다.배려매너 있고 즐겁게 여행하실분 연락주세요^^',	2,	'2023-12-30',	'2024-01-01',	'korea',	now(),	20,	32	)	;
+insert into accompany_main values(	12,	'user',	'12 25일부터 1월1일까지 뉴욕여행 동행 구해요!!',	'america.png',	'안녕하세요. 12월 25일 크리스마스부터 1월 1일까지 뉴욕 여행을 갈 예정입니다. 해당 기간동인 마이리얼트립을 통해서 근교보스턴, 워싱턴 여행이나 식사 같이 하면서 유명 핫플에 같이 가실 분들 말씀해주세요!!',	5,	'2023-12-25',	'2024-01-01',	'america',	now(),	21,	15	)	;
+insert into accompany_main values(	13,	'user',	'4월중순 부터 한달정도 서유럽 같이가실 동행구해요!',	'europe.png',	'23살 대학생 남자이고 4월에 전역이라 영국,프랑스,스위스정도 가볼려고 계획하고 있습니다확실히 정해진건 없어요!  여기저기 돌아다니고 먹는거 정도 좋아합니다! 아직 시간이 많이 남아서 천천히 계획할려고 하는데 동행있으면 좋을것같아서 구해봅니당 계획을 어느정도 바꿀수있으니까 편하게 쪽지 남겨주세요!!',	6,	'2024-04-14',	'2024-04-28',	'europe',	now(),	2,	32	)	;
+insert into accompany_main values(	14,	'user',	'한라산 동행',	'korea.png',	'픽업 가능 한라산 같이 등반해여!!',	4,	'2023-12-24',	'2023-12-25',	'korea',	now(),	21,	45	)	;
+insert into accompany_main values(	15,	'user',	'홍콩 카페 바 투어하고 디즈니가실분',	'asia.png',	'혼자여행가요 홍콩 20년만에가는거라 초행이나마찬가지.. 10잉 오전11 도착 15일새벽출국이고 침사추이에있을거에요 30 40대 여자분이면 좋겠어요 참고로 전 메이크업안하고 편하게다닐거에요.. 레깅스+크락스',	4,	'2024-01-15',	'2024-01-21',	'asia',	now(),	50,	78	)	;
+insert into accompany_main values(	16,	'user',	'부산 or 경주 여행 동행 찾아요',	'korea.png',	'맛집 카페 좋아하고 운동 좋아합니다. 경주나 부산 동행하실분 찾아요 저는 서울에서 출발합니다',	4,	'2023-12-23',	'2023-12-24',	'korea',	now(),	60,	65	)	;
+insert into accompany_main values(	17,	'user',	'2월 셋째 넷째 주 모로코 or 멕시코 여행 동행 구해봅니다.',	'america.png',	'직업상 이유로 여행 일정은 조율이 어려울 것 같습니다. 평소 가고 싶었던 두 나라 중 한곳으로 여행을 다녀오고 싶은데 혼자가는 것 보다 동행이 있으면 여러모로 더 만족스러운 여행이 될 것 같습니다. 33살 남자 이구요 동행으로는 20대 중반에서 30대 중반 남성분이면 좋겠다는 생각입니다. 모집인원은 4명이내로 생각하고 있습니다. 나라도 아직 결정하지 않은 만큼 여행 루트와 세부일정은 충분이 상의하여 결정해보고 싶네요. ',	5,	'2023-02-13',	'2024-02-24',	'america',	now(),	21,	32	)	;
+insert into accompany_main values(	18,	'user',	'1230-0105 같이 암스테르담 다닐 동행 구해요',	'europe.png',	'혼자 왔는데 같이 전시보거나 카페 다닐 분 구해요:  워낙 무계획 여행을 좋아해서 카페 전시 아니어도 아무거나 다 좋아요!',	2,	'2023-12-30',	'2024-01-04',	'europe',	now(),	21,	12	)	;
+insert into accompany_main values(	19,	'user',	'경주 여행갑니다!',	'korea.png',	'각자 여행하다가 밥만 같이 먹어도 되고, 같이 여행다녀도 됩니다! 전 서울 출발 12시 전 도착입니다!',	3,	'2023-12-23',	'2023-12-25',	'korea',	now(),	14,	15	)	;
+insert into accompany_main values(	20,	'user',	'3박 4일 몽골 투어2월달 아무때나 ',	'asia.png',	'3박 4일 정도 몽골 여행 패키지 같이 가실 분 구합니다 2월 아무때나 같이 가시고 사진찍는거 좋아하시는 분이 함께했으면 좋겠어요 : ',	3,	'2024-02-05',	'2024-02-08',	'asia',	now(),	32,	18	)	;
+insert into accompany_main values(	21,	'asdf',	'크리스마스 시즌 뉴욕여행',	'america.png',	'뉴욕 동행없이 혼자인데 2년전에 혼자여행왔던 경험이있네요. 28살 여자구 성격밝아요! 낮많이 가리시더라도 괜찮습니당. 이번여행에서는 예쁜곳 많이가서 사진도 많이찍고 소중한 추억들 간직하고싶어요. 저에겐 특별한 한해이고 제가 뉴욕을 넘 사랑해서 ㅎㅎㅎ.. 편하게 남녀노소 꼭 연락주세요:  12월 24~1월 1일 일정입니다. 풀로 가능하지않아도 일정맞는 날 맞춰서 같이 유동적으로 이동해도 좋아요!!',	4,	'2023-12-24',	'2024-01-01',	'america',	now(),	41,	19	)	;
+insert into accompany_main values(	22,	'asdf',	'Looking for someone who travels with me within South Korea or around Seoul! ^-^',	'korea.png',	'Hi! Im looking for someone who wants to travel with me within South Korea or around Seoul :  Im a 23y o girl from Germany and currently studying abroad in Japan. Ill be spending 2 days in Busan with a friend from Japan and she goes back on the evening of August 24, but I want to explore more of South Korea! ^^ Im planning to fly back to Japan around August 29 from Seoul. We could just travel around Seoul or visit some other cities like Gyeongju or wherever you want to go!! I want to explore Korean culture, food etc. :  I can speak German, English and Japanese sadly no Korean ><  If you re interested, please contact me!! It s no problem if you re only available on some days between 12 22 and 12 26! ',	4,	'2023-12-22',	'2023-12-26',	'korea',	now(),	21,	17	)	;
+insert into accompany_main values(	23,	'asdf',	'스페인 포르투갈 패키지 함께 가실분!!',	'europe.png',	'저는 30대 초반 여자구요~ 스페인 포르투갈 패키지 함께가실분 구해요~~ 서로 대화도하구 사진도 잘 찍어드려요~^^',	4,	'2023-12-28',	'2024-01-05',	'europe',	now(),	18,	13	)	;
+insert into accompany_main values(	24,	'asdf',	'내년 6월 미국 동서부 여행할 20대 여성 동행 찾아요 : ',	'america.png',	'내년 6월 14일부터 7월1일연장가능  미국 여행할 동행 구합니다 아직 구체적인 계획은 세우지 않아서 괜찮다면 케나다도 잠깐 가고싶어요! 계획 세우는거 좋아하고 가기 전까지 같이 만나서 계획도 세워보고싶어요 ㅎㅎ',	4,	'2024-06-14',	'2024-07-01',	'america',	now(),	14,	21	)	;
+insert into accompany_main values(	25,	'asdf',	'스페인 이비자섬 숙소쉐어&동행',	'europe.png',	'저는 20대 여자고 같이 여행도 즐기고 클럽이랑 파티두 같이 가실 분~! 카톡으로 하셔야 빠른 확인 가능해요! ',	6,	'2024-01-01',	'2024-01-05',	'europe',	now(),	5,	2	)	;
+insert into accompany_main values(	26,	'asdf',	'대구출발 서울 구경 같이 하실 분이요',	'korea.png',	'서울 핫플 좀 돌아 볼 생각입니다. 경기도 지역도 지역도 함께요. 사업 구상 차 가는 거라 목적 비슷한 분 있으시면 동행해요~일정은 더 늘어나도 됩니다. 숙은 각자 해결해도 식은 공동으로 합니다. 당연히 운전은 제몫이고요. 남녀 상관 없습니다만 대화가 좀 통하는 분이면 좋겠네요~',	6,	'2024-01-04',	'2024-01-06',	'korea',	now(),	8,	5	)	;
+insert into accompany_main values(	27,	'asdf',	'24.01.21 저녁 마카오 동행 구해요!',	'asia.png',	'21일 아침까지 친구랑 홍콩 여행하고 21일 낮부터 마카오 혼여행할 예정입니다! 밤에 마카오 혼자 다니기 무서워서 동행 구해봅니다! 22살 여성이고, mbti는 entj입니다:-  동행자는 20대 여성분이시면 좋겠어요! 남성분도 가능!',	2,	'2024-12-21',	'2024-12-22',	'asia',	now(),	7,	6	)	;
+insert into accompany_main values(	28,	'asdf',	'ED SHREEN 파리 공연 동행구해요!',	'europe.png',	'에드시런 공연시작 전에 만나서 같이 들어가고 끝나고 같이 갈사람 구합니다! 일단 두명구했고 둘다 20대 초반 여자입니다!  {여자만 연락부탁드려요혹시 숙소가 위치가 비슷하면 ubar 또는 bolt타고 같이 집까지 갔으면 합니당! ❗️',	2,	'2024-01-24',	'2024-01-25',	'europe',	now(),	6,	4	)	;
+insert into accompany_main values(	29,	'asdf',	'Looking for 2ppl to go to six flags w  me and my friend ',	'america.png',	'I have one friend and we are looking for two more ppl to go to six flags together!!',	5,	'2024-01-04',	'2024-01-08',	'america',	now(),	1,	2	)	;
+insert into accompany_main values(	30,	'asdf',	'3,4,5 월 중 동유럽 패키지 구합니당',	'europe.png',	'제가 여자라 같은 동성이었으면 좋겠고 나이대는 상관없습니당! 패키지 상품은 180~200초반으로 생각하고 있고 시기는 3,4,5월 모두 괜찮습니당 같이 맞춰나가봐요! 사진 찍는게 취미라 예쁘게 찍어드릴게요 편하게 연락주세용',	6,	'2024-03-01',	'2024-05-31',	'europe',	now(),	7,	7	)	;
 
+
+
+
+insert into accompany_comment values(1, 30, 'user', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(2, 29, 'user', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(3, 28, 'user', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(4, 27, 'user', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(5, 26, 'user', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(6, 25, 'user', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(7, 24, 'sehee1', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(8, 23, 'sehee1', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(9, 22, 'sehee1', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(10, 21, 'sehee1', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(11, 20, 'asdf', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(12, 19, 'asdf', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(13, 18, 'asdf', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(14, 17, 'asdf', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+insert into accompany_comment values(15, 16, 'asdf', '여행 같이 가요~ 동행 신청 보냈으니 확인 부탁드릴게요!', now());
+
+
+
+
+
+insert into accompany_pick values(1, 30, 'asdf', 'sehee1', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(2, 29, 'asdf', 'sehee1', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(3, 28, 'asdf', 'sehee1', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(4, 27, 'asdf', 'sehee1', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(5, 26, 'asdf', 'sehee1', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(6, 20, 'user', 'asdf', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 1);
+insert into accompany_pick values(7, 19, 'user', 'asdf', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 1);
+insert into accompany_pick values(8, 18, 'user', 'asdf', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 1);
+insert into accompany_pick values(9, 17, 'user', 'asdf', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(10, 16, 'user', 'asdf', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(11, 10, 'sehee1', 'user', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(12, 9, 'sehee1', 'user', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 0);
+insert into accompany_pick values(13, 8, 'sehee1', 'user', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 1);
+insert into accompany_pick values(14, 7, 'sehee1', 'user', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 1);
+insert into accompany_pick values(15, 6, 'sehee1', 'user', '안녕하세요! 업로드하신 동행글 보고 연락드립니다! 저도 그 시기에 같은 여행지에 있을 예정이에요! 같이 즐겁게 여행해요~', now(), 1);
 
 
 
