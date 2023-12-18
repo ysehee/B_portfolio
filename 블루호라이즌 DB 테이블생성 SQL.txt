@@ -17,7 +17,7 @@ create table accompany_main
     accompanyRegDate       datetime default CURRENT_TIMESTAMP null,
     accompanyLikeCnt       int      default 0                 null,
     accompanyViewCnt       int      default 0                 null
-)
+);
 
 
 
@@ -29,7 +29,7 @@ create table accompany_comment
     accompanyCommentWriter  varchar(50)              not null,
     accompanyCommentContent varchar(500)             not null,
     accompanyCommentRegDate datetime default (now()) not null
-)
+);
 
 
 
@@ -43,7 +43,7 @@ create table accompany_pick
     accompanyMessage     varchar(255)                       not null,
     accompanyApyDate     datetime default CURRENT_TIMESTAMP null,
     accompanyYN          tinyint(1)                         null
-)
+);
 
 
 create table accompany_like
@@ -52,7 +52,7 @@ create table accompany_like
         primary key,
     accompanyNo       int         null,
     accompanyLikeUser varchar(50) null
-)
+);
 
 
 
@@ -65,7 +65,7 @@ create table accompany_connection
     accompanyWriter       varchar(50)                 not null,
     accompanyPickApyUser  varchar(50) default (now()) not null,
     accompanyYN           tinyint(1)  default 0       not null
-)
+);
 
 
 
@@ -86,7 +86,7 @@ create table board_table
     detailImagePath  text                               null,
     mainUnique       varchar(255)                       null,
     detailUnique     text                               null
-)
+);
 
 
 
@@ -101,7 +101,7 @@ create table comment_table
     constraint fk_comment_table
         foreign key (boardId) references tripteam.board_table (id)
             on delete cascade
-)
+);
 
 
 
@@ -115,7 +115,7 @@ create table package_content
     packageImg       varchar(50)  null,
     packageTitle     varchar(250) not null,
     packageContent   varchar(250) not null
-)
+);
 
 
 
@@ -132,7 +132,7 @@ create table package_info
     packagePrice     varchar(50)                         not null,
     packageRegDate   timestamp default CURRENT_TIMESTAMP null,
     packageUpdate    datetime                            null
-)
+);
 
 
 
@@ -153,7 +153,7 @@ create table reservation_payment
     reservationTotalPrice  int         null,
     reservationPayMethod   varchar(50) null,
     reservationPayDate     datetime    not null
-)
+);
 
 
 
@@ -170,8 +170,8 @@ create table user
     userPhoneNo varchar(100)             not null,
     userEmail   varchar(100)             not null,
     userRegDate datetime default (now()) null
-)
-    charset = utf8mb3;
+);
+    
 
 
 insert into accompany_main values(	1,	'sehee1',	 '연말 기념 유럽 여행 한달동안 다녀오실 분 구합니다',	'europe.png',	'같이 유럽여행 다녀오실 분! 연말 기념 유럽 여행 한달동안 다녀오실 분 구합니다',	2,	'2023-12-01',	'2023-12-31',	'europe',	now(),	0,	1	)	;
@@ -204,6 +204,29 @@ insert into accompany_main values(	27,	'sehee1',	'24.01.21 저녁 마카오 동�
 insert into accompany_main values(	28,	'sehee1',	'ED SHREEN 파리 공연 동행구해요!',	'europe.png',	'에드시런 공연시작 전에 만나서 같이 들어가고 끝나고 같이 갈사람 구합니다! 일단 두명구했고 둘다 20대 초반 여자입니다!  {여자만 연락부탁드려요혹시 숙소가 위치가 비슷하면 ubar 또는 bolt타고 같이 집까지 갔으면 합니당! ❗️',	2,	'2024-01-24',	'2024-01-25',	'europe',	now(),	6,	4	)	;
 insert into accompany_main values(	29,	'sehee1',	'Looking for 2ppl to go to six flags w  me and my friend ',	'america.png',	'I have one friend and we are looking for two more ppl to go to six flags together!!',	5,	'2024-01-04',	'2024-01-08',	'america',	now(),	1,	2	)	;
 insert into accompany_main values(	30,	'sehee1',	'3,4,5 월 중 동유럽 패키지 구합니당',	'europe.png',	'제가 여자라 같은 동성이었으면 좋겠고 나이대는 상관없습니당! 패키지 상품은 180~200초반으로 생각하고 있고 시기는 3,4,5월 모두 괜찮습니당 같이 맞춰나가봐요! 사진 찍는게 취미라 예쁘게 찍어드릴게요 편하게 연락주세용',	6,	'2024-03-01',	'2024-05-31',	'europe',	now(),	7,	7	)	;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
