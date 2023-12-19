@@ -46,7 +46,6 @@ public class AccompanyPickService {
 
     // 나의 동행 확정내역 확인하기
     public List<AccompanyConnectionDto> selectConnectionList(String userId){
-        System.out.println("서비스 : "+userId);
         return accompanyPickDao.selectConnectionList(userId);
     }
 

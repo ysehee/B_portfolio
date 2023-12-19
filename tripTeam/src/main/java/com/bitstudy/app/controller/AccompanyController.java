@@ -25,9 +25,6 @@ public class AccompanyController {
     @Autowired
     AccompanyCommentService accompanyCommentService;
 
-    // 페이지네이션
-    // 불러오기 글 수
-
     /*동행 게시글 전체 불러오기*/
     @RequestMapping("/board")
     public String showAccompanyList(HttpSession session, HttpServletRequest request, Model model) {
@@ -80,11 +77,9 @@ public class AccompanyController {
             model.addAttribute("accompanyCommentList", accompanyCommentList);
             model.addAttribute("loginUserId", loginUserId);
 
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
         return "accompanyBoard";
     }
 
@@ -92,7 +87,6 @@ public class AccompanyController {
     /* 동행 새 글 작성 */
     @GetMapping("/write")
     public String write(Model model, HttpSession session, HttpServletRequest request) {
-        System.out.println("새글작성");
         model.addAttribute("mode", "new");
 
         session = request.getSession();
@@ -107,9 +101,6 @@ public class AccompanyController {
         String loginUserId = (String) session.getAttribute("id");
 
         accompanyDto.setAccompanyWriter(loginUserId);
-
-        System.out.println(accompanyDto);
-
         accompanyService.create(accompanyDto);
 
         return "redirect:/accompany/board";
@@ -119,7 +110,6 @@ public class AccompanyController {
     @ResponseBody
     @PostMapping("/modify")
     public int modify(@RequestParam Map<String, Object> paramMap) {
-
         int result = accompanyService.modify(paramMap);
 
         return result;
@@ -129,7 +119,6 @@ public class AccompanyController {
     /*동행글 삭제*/
     @PostMapping("/deleteBoard")
     public String deleteBoard(@RequestParam("accompanyNo") int accompanyNo) {
-
         accompanyService.remove(accompanyNo);
 
         return "redirect:/accompany/board";
@@ -141,7 +130,6 @@ public class AccompanyController {
     @GetMapping("/like")
     public int likeAcc(@RequestParam Map<String, Object> paramMap) {
         int result = 0;
-        System.out.println("찜 맵퍼");
 
         AccompanyLikeDto chkLike = accompanyService.chkLikeUser(paramMap);
 
@@ -149,18 +137,13 @@ public class AccompanyController {
             accompanyService.createLikeInfo(paramMap);
             accompanyService.likeUp(paramMap);
 
-            System.out.println("찜한 이력 없음");
             result = 0;
         } else if (chkLike != null) {
             accompanyService.removelike(paramMap);
             accompanyService.likeDown(paramMap);
 
-            System.out.println("찜 이력 있음");
             result = 1;
         }
-        System.out.println("컨트롤러 chkLike: "+chkLike);
-        System.out.println("컨트롤러 paramMap: "+paramMap);
-
         return result;
     }
 
@@ -194,8 +177,6 @@ public class AccompanyController {
 
         session = request.getSession();
         String loginUserId = (String) session.getAttribute("id");
-
-        System.out.println(accompanySearchText);
 
         List<AccompanyDto> accompanyList = accompanyService.searchList(accompanySearchText);
         model.addAttribute("accompanyList", accompanyList);

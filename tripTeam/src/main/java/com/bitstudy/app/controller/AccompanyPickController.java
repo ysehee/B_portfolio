@@ -28,7 +28,6 @@ public class AccompanyPickController {
 
     @GetMapping("/openPickPopup")
     public String openPickPopup(HttpSession session, HttpServletRequest request, Model model){
-        System.out.println("팝업창 열기");
 
         session = request.getSession();
         String loginUserId = (String)session.getAttribute("id");
@@ -47,9 +46,6 @@ public class AccompanyPickController {
     @ResponseBody
     @PostMapping("/pickU")
     public int pickU(@RequestParam Map<String, Object> paramMap){
-        System.out.println("동행 신청 보내기");
-
-        System.out.println("paramMap 값: "+ paramMap);
 
         int result = accompanyPickService.createPick(paramMap);
         System.out.println("result 값: " + result);
@@ -107,12 +103,9 @@ public class AccompanyPickController {
     @ResponseBody
     @PostMapping("/accPickSpendCancel")
     public int removePickSpendCancel(@RequestParam Map<String, Object> paramMap){
-        System.out.println("픽넘버: "+paramMap);
 
         int accompanyPickNo = Integer.valueOf((String)paramMap.get("accompanyPickNo"));
-        System.out.println("픽넘버 숫자형으로 변환: "+accompanyPickNo);
         int removePickSpd = accompanyPickService.removePickSpendCancel(accompanyPickNo);
-        System.out.println("지우기 성공여부: "+removePickSpd);
 
         return accompanyPickNo;
     }
@@ -129,7 +122,6 @@ public class AccompanyPickController {
         model.addAttribute("loginUserId", loginUserId);
 
         return "accompanyAccIReceive";
-//        return "Accompany_receive";
     }
 
 
@@ -143,10 +135,6 @@ public class AccompanyPickController {
         List<AccompanyConnectionDto> accompanyConnectionList = accompanyPickService.selectConnectionList(loginUserId);
         model.addAttribute("accompanyConnectionList",accompanyConnectionList);
         model.addAttribute("loginUserId", loginUserId);
-
-        System.out.println("확정리스트: "+accompanyConnectionList);
-
-        System.out.println("컨트롤러 : "+loginUserId);
 
         return "accompanyAccConnectionList";
     }
@@ -165,8 +153,4 @@ public class AccompanyPickController {
             }
         return accompanyPickNo;
     }
-
-
-
-
 }

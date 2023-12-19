@@ -25,20 +25,13 @@ public class AccompanyCommentController {
 
     /* 새 댓글 작성 후 등록하기 */
     @PostMapping("/writeCmt")
-        public String writeComment( AccompanyCommentDto accompanyCommentDto,Integer accompanyNo, Integer page, Integer pageSize, Model model, HttpSession session){
+        public String writeComment( AccompanyCommentDto accompanyCommentDto,Integer accompanyNo, Model model, HttpSession session){
 
-//        String currUserId = (String) session.getAttribute("userId");
-//        accompanyCommentDto.setAccompanyCommentWriter(currUserId);
         try {
             accompanyCommentService.createCmt(accompanyCommentDto);
-//            System.out.println("댓글내용: "+accompanyCommentList);
-
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-        System.out.println(accompanyCommentDto);
-
         return "redirect:/accompany/read?accompanyNo=" + accompanyNo;
     }
     
@@ -46,8 +39,6 @@ public class AccompanyCommentController {
     @ResponseBody
     @PostMapping("/modifyCmt")
     public int modifyCmt(@RequestParam Map<String, Object> paramMap){
-        System.out.println(paramMap);
-        System.out.println("수정 맵퍼 들어옴");
         int result = accompanyCommentService.modifyCmt(paramMap);
         return result;
     }
@@ -60,12 +51,10 @@ public class AccompanyCommentController {
         System.out.println(result);
         if(result == 1){
             System.out.println("댓글 삭제 성공");
-
         }
         else{
             System.err.println("댓글 삭제 이상");
         }
-
         return "redirect:/accompany/read?accompanyNo=" + accompanyNo;
     }
 

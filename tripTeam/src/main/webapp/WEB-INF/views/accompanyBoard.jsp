@@ -37,7 +37,8 @@
 			height: 30px;
 		}
 		.accompanyCommentContent {
-			width: 40%;
+			/*width: 40%;*/
+            width: 630px;
 		}
 		#btnModiEnter,
 		.btn_editDoneCmt{
@@ -276,7 +277,7 @@
 								<input type="text"  style="text-align: center; border: none; outline: none; font-family: Noto Sans KR,sans-serif;
     font-weight: 800;" value="${item.accompanyCommentWriter}" value="${item.accompanyCommentWriter}" readonly>
 								<input type="text" style="border: none; border-bottom: 1px solid; outline: none; " class="accompanyCommentContent" value="${item.accompanyCommentContent}" readonly>
-								<c:if test="${accompanyDto.accompanyWriter eq loginUserId}">
+								<c:if test="${item.accompanyCommentWriter eq loginUserId}">
 									<button type="button" style="height: 32px" class="btn btn_editCmt" onclick="goModifyCmtBtn(this)" >댓글 수정</button>
 									<button type="submit" style="height: 32px" class="btn btn_deleteCmt">댓글 삭제</button>
 								</c:if>

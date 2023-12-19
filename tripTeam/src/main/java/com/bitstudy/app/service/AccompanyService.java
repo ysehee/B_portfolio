@@ -42,8 +42,6 @@ public class AccompanyService {
     public AccompanyDto read(int accompanyNo){
 
         AccompanyDto accompanyDto = accompanyDao.selectOne(accompanyNo);
-//        accompanyDao.increaseViewCnt(accompanyNo);
-//        accompanyDto.setAccompanyViewCnt(accompanyDto.getAccompanyViewCnt()+1);
 
         return accompanyDto;
     }

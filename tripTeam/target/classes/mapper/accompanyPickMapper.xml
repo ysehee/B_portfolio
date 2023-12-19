@@ -9,12 +9,8 @@
 
     <!--[동행하기] 버튼 이용하여 동행 신청하면 DB에 저장-->
     <insert id="insertPick" parameterType="map" >
-        insert into accompany_pick (accompanyNo, accompanyWriter, accompanyPickApyUser,accompanyMessage
-<!--        accompanyApyDate-->
-        )
-        values (#{accompanyNo},#{accompanyWriter},#{accompanyPickApyUser},#{accompanyMessage}
-<!--        ,#{accompanyApyDate}-->
-        )
+        insert into accompany_pick (accompanyNo, accompanyWriter, accompanyPickApyUser,accompanyMessage)
+        values (#{accompanyNo},#{accompanyWriter},#{accompanyPickApyUser},#{accompanyMessage})
     </insert>
 
 
@@ -28,6 +24,7 @@
         #{accompanyPickApyUser},
         #{accompanyYN})
     </insert>
+
 
     <!--//////////////////// SELECT 조회 ////////////////////-->
 

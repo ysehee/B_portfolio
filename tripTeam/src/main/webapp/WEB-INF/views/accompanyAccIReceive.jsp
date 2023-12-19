@@ -172,7 +172,7 @@
 				<th class="writer">동행글 작성자</th>
 				<th class="request_id">동행신청자 아이디</th>
 				<th class="requset_msg">동행신청 메세지</th>
-				<th class="company_existence_button">동행 (수락/거절) 선택버튼</th>
+				<th class="company_existence_button">동행 (수락/거절)</th>
 
 
 			</tr>
